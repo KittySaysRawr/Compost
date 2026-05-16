@@ -1,0 +1,2879 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenMeans: Compost</title>
+  <meta name="description" content="Use our ultimate compost cheat sheet. Find 600+ items, use our balance calculator, and learn composting basics.">
+  <meta name="keywords" content="compost, composting, green means, green, brown, nitrogen, carbon, organic waste, eco-friendly, sustainability">
+  <link rel="canonical" href="https://compost.greenmeans.ovh">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://compost.greenmeans.ovh">
+  <meta property="og:title" content="GreenMeans: Compost">
+  <meta property="og:description" content="Quickly check what is compostable with our ultimate compost cheat sheet. Find 600+ items and balance your pile.">
+  <meta property="og:image" content="https://compost.greenmeans.ovh/favicon.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://compost.greenmeans.ovh">
+  <meta property="twitter:title" content="GreenMeans: Compost">
+  <meta property="twitter:description" content="Quickly check what is compostable with our ultimate compost cheat sheet. Find 600+ items and balance your pile.">
+  <meta property="twitter:image" content="https://compost.greenmeans.ovh/favicon.png">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "GreenMeans: Compost",
+      "url": "https://compost.greenmeans.ovh",
+      "description": "An interactive cheat sheet for composting decisions with a balance calculator.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All"
+    }
+  </script>
+  <style>
+    /* Base & Typography */
+    :root {
+      /* Dark Theme (Default) */
+      --color-bg: #0f1115;
+      --color-surface: #171a21;
+      --color-text: #f1f5f9;
+      --color-text-light: #94a3b8;
+      --color-border: #272c36;
+      --color-hover: #1e222a;
+      
+      --color-green-bg: rgba(16, 185, 129, 0.1);
+      --color-green-border: rgba(16, 185, 129, 0.25);
+      --color-green-text: #34d399;
+      
+      --color-brown-bg: rgba(217, 119, 6, 0.1);
+      --color-brown-border: rgba(217, 119, 6, 0.25);
+      --color-brown-text: #fbbf24;
+      
+      --color-avoid-bg: rgba(225, 29, 72, 0.1);
+      --color-avoid-border: rgba(225, 29, 72, 0.25);
+      --color-avoid-text: #fb7185;
+      
+      --color-primary: #cbd5e1;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Light Theme */
+    [data-theme="light"] {
+      --color-bg: #f8fafc;
+      --color-surface: #ffffff;
+      --color-text: #0f172a;
+      --color-text-light: #64748b;
+      --color-border: #e2e8f0;
+      --color-hover: #f1f5f9;
+      
+      --color-green-bg: rgba(16, 185, 129, 0.05);
+      --color-green-border: rgba(16, 185, 129, 0.2);
+      --color-green-text: #059669;
+      
+      --color-brown-bg: rgba(180, 83, 9, 0.05);
+      --color-brown-border: rgba(180, 83, 9, 0.2);
+      --color-brown-text: #b45309;
+      
+      --color-avoid-bg: rgba(225, 29, 72, 0.05);
+      --color-avoid-border: rgba(225, 29, 72, 0.2);
+      --color-avoid-text: #e11d48;
+      
+      --color-primary: #334155;
+      --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
+    
+    .dyslexia-font {
+      font-family: 'Lexend', 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
+      letter-spacing: 0.01em;
+      word-spacing: 0.05em;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    .skip-link {
+      background: var(--color-green-text);
+      color: var(--color-bg);
+      font-weight: 700;
+      left: 50%;
+      padding: 8px;
+      position: absolute;
+      transform: translateY(-100%);
+      transition: transform 0.3s;
+      z-index: 1001;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      padding-bottom: 3rem;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 4rem 1.5rem 3rem;
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    header .subtitle {
+      font-size: 1.25rem;
+      color: var(--color-text-light);
+      margin-bottom: 1rem;
+    }
+    header .explanation {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+    .explanation span.green { color: var(--color-green-text); font-weight: 600; }
+    .explanation span.brown { color: var(--color-brown-text); font-weight: 600; }
+    .explanation span.avoid { color: var(--color-avoid-text); font-weight: 600; }
+
+    /* Controls: Search & Filter */
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+      background: var(--color-surface);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+    }
+    
+    .search-wrapper {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .search-wrapper input {
+      width: 100%;
+      padding: 0.75rem 2.5rem 0.75rem 1rem;
+      font-size: 1rem;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .clear-search {
+      position: absolute;
+      right: 0.75rem;
+      background: none;
+      border: none;
+      color: var(--color-text-light);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      border-radius: 50%;
+      transition: all 0.2s;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .clear-search.visible {
+      opacity: 0.7;
+      visibility: visible;
+    }
+
+    .clear-search:hover {
+      opacity: 1;
+      background: var(--color-hover);
+    }
+    .search-wrapper input::placeholder {
+      color: var(--color-text-light);
+      opacity: 0.7;
+    }
+    .search-wrapper input:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(203, 213, 225, 0.1);
+    }
+
+    /* Status Toggle */
+    .status-toggle {
+      display: flex;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 24px;
+      padding: 2px;
+      width: fit-content;
+      margin: 0 auto;
+    }
+    .status-toggle-item {
+      position: relative;
+    }
+    .status-toggle-item input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .status-toggle-item span {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-text-light);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .status-toggle-item input:checked + span {
+      background: var(--color-green-text);
+      color: #0f1115;
+    }
+    @media (min-width: 600px) {
+      .status-toggle-item span {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Nav Buttons */
+    .home-trigger, .settings-trigger {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      color: var(--color-text);
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .home-trigger:hover, .settings-trigger:hover {
+      background: var(--color-hover);
+      transform: translateY(-1px);
+    }
+
+    .settings-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+
+    .settings-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .settings-modal {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      width: 90%;
+      max-width: 400px;
+      padding: 2rem;
+      position: relative;
+      transform: scale(0.9);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .settings-overlay.open .settings-modal {
+      transform: scale(1);
+    }
+
+    /* Reduce Motion Overrides */
+    body.reduce-motion *,
+    body.reduce-motion *::before,
+    body.reduce-motion *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+    html.reduce-motion {
+      scroll-behavior: auto !important;
+    }
+
+    .settings-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .close-settings {
+      background: none;
+      border: none;
+      color: var(--color-text-light);
+      cursor: pointer;
+      padding: 0.5rem;
+      display: flex;
+    }
+
+    .settings-option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .settings-option:last-child {
+      border-bottom: none;
+    }
+
+    .option-info h4 {
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .option-info p {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+    }
+
+    /* Toggle Switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--color-border);
+      transition: .4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--color-green-text);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+
+    /* Accordion Layout */
+    .cheat-sheet {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+      transition: padding-bottom 0.4s ease;
+      overflow-anchor: none;
+    }
+
+    .cheat-sheet.has-open {
+      padding-bottom: 2rem;
+    }
+
+    .accordion-group {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      scroll-margin-top: 0;
+      isolation: isolate;
+      /* clip-path prevents the sticky header curtain from bleeding out */
+      clip-path: inset(0 0 0 0); 
+    }
+
+    .accordion-group.open {
+      border-color: var(--color-primary-light);
+      box-shadow: var(--shadow-md);
+    }
+
+    .accordion-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--color-surface);
+      color: var(--color-text);
+      cursor: pointer;
+      text-align: left;
+      font-family: inherit;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      border-radius: var(--radius);
+      outline: none;
+    }
+
+    .accordion-header > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Masking curtain: hides cards as they scroll above the sticky header */
+    .accordion-header::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      background: var(--color-bg);
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .accordion-group.open .accordion-header::before {
+      opacity: 1;
+    }
+
+    .accordion-group.open .accordion-header {
+       background: var(--color-surface);
+       border-radius: var(--radius) var(--radius) 0 0;
+       border-bottom: 1px solid var(--color-border);
+       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .accordion-header:hover {
+      background: var(--color-hover);
+    }
+
+    .accordion-header h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 0;
+      color: var(--color-text);
+    }
+
+    .accordion-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+      color: var(--color-text-light);
+    }
+
+    .accordion-group.open .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .category-count {
+      font-size: 0.8rem;
+      background: var(--color-bg);
+      color: var(--color-text-light);
+      padding: 0.25rem 0.6rem;
+      border-radius: 12px;
+      margin-left: 0.5rem;
+      font-weight: 600;
+    }
+
+    .accordion-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s ease-out, padding 0.3s ease;
+      border-top: 1px solid transparent;
+      background: var(--color-bg);
+    }
+
+    .accordion-group.open .accordion-content {
+      grid-template-rows: 1fr;
+      padding-bottom: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .accordion-inner {
+      overflow: hidden;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      padding: 1rem;
+      align-items: stretch;
+    }
+    @media (min-width: 768px) { .grid-container { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); } }
+
+    .item-card {
+      background: var(--color-surface);
+      padding: 1rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      height: 100%;
+    }
+    .item-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    .item-card[data-category="Green"] { background: var(--color-green-bg); border-color: var(--color-green-border); }
+    .item-card[data-category="Brown"] { background: var(--color-brown-bg); border-color: var(--color-brown-border); }
+    .item-card[data-category="Avoid"] { background: var(--color-avoid-bg); border-color: var(--color-avoid-border); }
+
+    .item-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 0.5rem;
+      flex: 1;
+    }
+    .item-header-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      margin-top: auto;
+    }
+    .item-badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+    .expand-icon {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      color: var(--color-text);
+      opacity: 0.5;
+    }
+    .item-card.expanded .expand-icon {
+      transform: rotate(180deg);
+    }
+    .item-details {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .item-details-inner {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .item-card.expanded .item-details {
+      grid-template-rows: 1fr;
+    }
+    .item-card.expanded .item-details-inner {
+      padding-top: 0.5rem;
+    }
+    .item-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+    }
+    .item-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+    .item-card[data-category="Green"] .item-badge { background: var(--color-green-bg); color: var(--color-green-text); border: 1px solid var(--color-green-border); }
+    .item-card[data-category="Brown"] .item-badge { background: var(--color-brown-bg); color: var(--color-brown-text); border: 1px solid var(--color-brown-border); }
+    .item-card[data-category="Avoid"] .item-badge { background: var(--color-avoid-bg); color: var(--color-avoid-text); border: 1px solid var(--color-avoid-border); }
+
+    .item-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .category-chip {
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+      display: inline-block;
+      text-transform: uppercase;
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    body[data-theme="dark"] .category-chip {
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .item-note {
+      font-size: 0.95rem;
+      color: var(--color-text-light);
+      margin: 0;
+    }
+    .item-reason {
+      font-size: 0.95rem;
+      color: var(--color-text-light);
+      margin: 0;
+    }
+    .item-card[data-category="Green"] .item-note, .item-card[data-category="Green"] .item-reason { color: #a7f3d0; opacity: 0.9;}
+    .item-card[data-category="Brown"] .item-note, .item-card[data-category="Brown"] .item-reason { color: #fde68a; opacity: 0.9;}
+    .item-card[data-category="Avoid"] .item-note, .item-card[data-category="Avoid"] .item-reason { color: #fecdd3; opacity: 0.9;}
+
+    .item-tip {
+      font-size: 0.85rem;
+      padding: 0.75rem;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
+      border-left: 3px solid transparent;
+      line-height: 1.4;
+    }
+    /* Light theme tip adjustments */
+    body[data-theme="light"] .item-tip {
+      background: rgba(0,0,0,0.03);
+    }
+    .item-card[data-category="Green"] .item-tip { background: rgba(52, 211, 153, 0.1); border-left-color: #34d399; color: var(--color-green-text);}
+    body[data-theme="light"] .item-card[data-category="Green"] .item-tip { background: rgba(52, 211, 153, 0.15);}
+
+    .item-card[data-category="Brown"] .item-tip { background: rgba(251, 191, 36, 0.1); border-left-color: #fbbf24; color: var(--color-brown-text);}
+    body[data-theme="light"] .item-card[data-category="Brown"] .item-tip { background: rgba(251, 191, 36, 0.15);}
+
+    .item-card[data-category="Avoid"] .item-tip { background: rgba(244, 63, 94, 0.1); border-left-color: #f43f5e; color: var(--color-avoid-text);}
+    body[data-theme="light"] .item-card[data-category="Avoid"] .item-tip { background: rgba(244, 63, 94, 0.15);}
+
+    .learn-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 0.25rem;
+      opacity: 0.85;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .item-card[data-category="Green"] .learn-more-link { color: var(--color-green-text); }
+    .item-card[data-category="Brown"] .learn-more-link { color: var(--color-brown-text); }
+    .item-card[data-category="Avoid"] .learn-more-link { color: var(--color-avoid-text); }
+    .learn-more-link:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .learn-more-link svg {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s;
+    }
+    .learn-more-link:hover svg {
+      transform: translateX(2px);
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 2rem;
+      color: var(--color-text-light);
+      font-size: 1.1rem;
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      grid-column: 1 / -1;
+    }
+
+    /* Guidance Section */
+    .calculator {
+      background: var(--color-surface);
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      margin-bottom: 2rem;
+    }
+    .calculator-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .calculator h2 { margin: 0; font-size: 1.75rem; }
+    .calculator .subtitle { color: var(--color-text-light); margin: 0.5rem 0 0; font-size: 0.95rem; }
+
+    .reset-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      background: rgba(244, 63, 94, 0.1);
+      color: var(--color-avoid-text);
+      border: 1px solid rgba(244, 63, 94, 0.2);
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .reset-btn:hover {
+      background: var(--color-avoid-bg);
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    @media (min-width: 900px) { .calc-grid { grid-template-columns: 1fr 1fr; } }
+
+    .inputs-side {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .manual-inputs h3, .bin-contents h3 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+      color: var(--color-text-light);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 0.5rem;
+    }
+
+    .input-group { margin-bottom: 1.5rem; }
+    .input-group label { display: block; font-weight: 600; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    
+    .stepper-container {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    
+    .stepper-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-size: 1.25rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      flex-shrink: 0;
+      user-select: none;
+      box-shadow: var(--shadow-sm);
+    }
+    .stepper-btn:hover {
+      background: var(--color-hover);
+      border-color: var(--color-primary);
+      transform: translateY(-1px);
+    }
+    .stepper-btn:active {
+      transform: translateY(1px);
+    }
+
+    .input-group input[type="range"] { 
+      flex: 1; 
+      accent-color: var(--color-primary);
+      cursor: pointer;
+      height: 6px;
+      border-radius: 3px;
+    }
+    .val-display { display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem; }
+    .val-display span { font-weight: 700; font-size: 1.5rem; }
+    .val-display .green { color: var(--color-green-text); }
+    .val-display .brown { color: var(--color-brown-text); }
+
+    .ratio-result {
+      padding: 3rem;
+      border-radius: var(--radius);
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: flex-start;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .mood-indicator {
+      width: 80px;
+      height: 80px;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      background: var(--color-surface);
+      border: 3px solid var(--color-border);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .balance-viz {
+      width: 100%;
+      margin: 2rem 0;
+    }
+    .viz-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+      color: var(--color-text-light);
+    }
+    .indicator-bar {
+      width: 100%;
+      height: 16px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .ideal-zone {
+      position: absolute;
+      left: 30%;
+      width: 40%;
+      height: 100%;
+      background: rgba(52, 211, 153, 0.08);
+      border-left: 2px dashed rgba(52, 211, 153, 0.2);
+      border-right: 2px dashed rgba(52, 211, 153, 0.2);
+      z-index: 1;
+    }
+    .indicator-fill {
+      height: 100%;
+      background: var(--color-green-text);
+      transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s ease;
+      width: 0%;
+      z-index: 2;
+      position: relative;
+    }
+    .ratio-breakdown {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+    }
+
+    .recommendations {
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      background: rgba(255,255,255,0.03);
+      border-radius: var(--radius);
+      border-left: 4px solid var(--color-primary);
+      text-align: left;
+      width: 100%;
+      display: none;
+    }
+    .recommendations.visible { display: block; }
+    .recommendations h4 { font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; color: var(--color-primary); }
+    .recommendations p { font-size: 0.9rem; color: var(--color-text); margin: 0; line-height: 1.5; min-height: 3em; }
+
+    .rec-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 0.75rem;
+    }
+    .cycle-btn {
+      background: none;
+      border: none;
+      color: var(--color-primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0;
+      transition: opacity 0.2s;
+    }
+    .cycle-btn:hover { opacity: 0.8; text-decoration: underline; }
+    .rec-counter {
+      font-size: 0.7rem;
+      color: var(--color-text-light);
+      font-family: var(--font-mono);
+    }
+
+    /* Indicator states */
+    .indicator-fill.status-perfect { background: linear-gradient(to right, #10b981, #34d399); box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); }
+    .indicator-fill.status-warning { background: linear-gradient(to right, #f59e0b, #fbbf24); box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); }
+    .indicator-fill.status-danger { background: linear-gradient(to right, #ef4444, #f87171); box-shadow: 0 0 20px rgba(239, 68, 68, 0.4); }
+
+    .status-badge {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .status-desc { font-size: 1rem; color: var(--color-text-light); line-height: 1.5; max-width: 300px; }
+    
+    /* Guidance Section */
+    .guidance {
+      background: var(--color-surface);
+      padding: 2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      margin-bottom: 2rem;
+    }
+    .guidance h2 { margin-bottom: 1.5rem; font-size: 1.75rem; }
+    
+    .guidance-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 768px) { .guidance-grid { grid-template-columns: 1fr 1fr; } }
+    
+    .guidance-col h3 { margin-bottom: 0.5rem; }
+    .guidance-col p { margin-bottom: 1rem; color: var(--color-text-light); }
+    .tips-list { list-style: none; }
+    .tips-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-text-light);
+    }
+    .tips-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    /* Collapsible Section */
+    .advanced-tips {
+      border-top: 1px solid var(--color-border);
+      padding-top: 1.5rem;
+      margin-top: 1rem;
+    }
+    .advanced-tips summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      padding: 0.5rem 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .advanced-tips summary::-webkit-details-marker {
+      display: none;
+    }
+    .advanced-tips summary::before {
+      content: "▶";
+      font-size: 0.7rem;
+      transition: transform 0.2s;
+    }
+    .advanced-tips[open] summary::before {
+      transform: rotate(90deg);
+    }
+    .advanced-content {
+      padding: 1.5rem 0 0.5rem;
+    }
+    .advanced-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) { .advanced-grid { grid-template-columns: 1fr 1fr; } }
+    .advanced-grid h4 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-text);
+    }
+    .advanced-grid p {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+    }
+
+    /* Top Banner */
+    .top-banner {
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0.75rem 0;
+      position: relative;
+      z-index: 100;
+    }
+    .banner-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .logo-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      flex-shrink: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .logo-btn:hover {
+      border-color: var(--color-green-text);
+      transform: scale(1.1);
+      animation: logoWobble 0.5s ease-in-out;
+      box-shadow: 0 0 12px rgba(52, 211, 153, 0.3);
+    }
+    .banner-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .logo-fallback {
+      font-size: 1.25rem;
+    }
+    @keyframes logoWobble {
+      0% { transform: scale(1.1) rotate(0deg); }
+      25% { transform: scale(1.1) rotate(-8deg); }
+      50% { transform: scale(1.1) rotate(6deg); }
+      75% { transform: scale(1.1) rotate(-3deg); }
+      100% { transform: scale(1.1) rotate(0deg); }
+    }
+    .banner-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.01em;
+      color: var(--color-text);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      border-top: 1px solid var(--color-border);
+      padding-top: 1.5rem;
+      color: var(--color-text-light);
+      font-size: 0.85rem;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+</head>
+<body id="top">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <nav class="top-banner">
+    <div class="container banner-inner">
+      <div class="logo-wrapper">
+        <div class="logo-btn" aria-hidden="true">
+          <img src="favicon.png" alt="" class="banner-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="logo-fallback" style="display:none;">🌿</span>
+        </div>
+        <span class="banner-title">GreenMeans: Compost</span>
+      </div>
+      <div class="banner-actions" style="display: flex; gap: 0.5rem;">
+        <a href="https://greenmeans.ovh" class="home-trigger" title="Go to Home" aria-label="Home">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
+        </a>
+        <button class="settings-trigger" id="settingsBtn" aria-label="Open settings">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          Settings
+        </button>
+      </div>
+    </div>
+  </nav>
+
+    <header>
+      <h1>Can I Compost This?</h1>
+      <p class="subtitle">A quick cheat sheet for everyday compost decisions</p>
+      <p class="explanation">
+        Mix moist, nitrogen-rich <span class="green">Greens</span> with dry, carbon-rich <span class="brown">Browns</span>. 
+        Keep the <span class="avoid">Avoid</span> items out of your bin.
+      </p>
+    </header>
+
+  <div class="settings-overlay" id="settingsOverlay" role="dialog" aria-labelledby="settingsHeading" aria-modal="true">
+    <div class="settings-modal">
+      <div class="settings-header">
+        <h2 id="settingsHeading">App Settings</h2>
+        <button class="close-settings" id="closeSettings" aria-label="Close settings">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="settings-option">
+        <div class="option-info">
+          <h3>Dark Mode</h3>
+          <p>Toggle between dark and light themes</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="themeToggle" checked>
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+      </div>
+
+      <div class="settings-option">
+        <div class="option-info">
+          <h3>Dyslexia-Friendly Font</h3>
+          <p>Use Lexend for improved readability</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="dyslexiaToggle">
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+      </div>
+
+      <div class="settings-option">
+        <div class="option-info">
+          <h3>Reduce Motion</h3>
+          <p>Minimize animations and use instant scrolling</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="motionToggle">
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <main class="container" id="main-content">
+    <section class="controls" aria-label="Search and filter items">
+      <div class="search-wrapper">
+        <label for="searchInput" class="sr-only">Search items</label>
+        <input type="text" id="searchInput" placeholder="Search for an item (e.g. banana, paper)...">
+        <button id="clearSearch" class="clear-search" aria-label="Clear search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="status-toggle" role="radiogroup" aria-label="Filter by compostability">
+        <label class="status-toggle-item">
+          <input type="radio" name="status" value="all" checked id="status-all">
+          <span>Show All</span>
+        </label>
+        <label class="status-toggle-item">
+          <input type="radio" name="status" value="compostable" id="status-compostable">
+          <span>Compostable Only</span>
+        </label>
+        <label class="status-toggle-item">
+          <input type="radio" name="status" value="non-compostable" id="status-non">
+          <span>Avoid Only</span>
+        </label>
+      </div>
+      <!-- Screen reader only status region for search results -->
+      <div id="search-status" class="sr-only" aria-live="polite"></div>
+    </section>
+
+    <section id="itemContainer" class="cheat-sheet" aria-live="polite">
+      <!-- Items will be injected here by JavaScript -->
+    </section>
+
+    <!-- Compost Balance Calculator -->
+    <section class="calculator" id="calculator">
+      <div class="calculator-header">
+        <div>
+          <h2>Compost Balance Checker</h2>
+          <p class="subtitle">Adjust the sliders to simulate your compost mix and check for ideal balance.</p>
+        </div>
+      </div>
+      
+      <div class="calc-grid">
+        <div class="inputs-side">
+          <div class="manual-inputs">
+            <h3>Carbon to Nitrogen Ratio</h3>
+            <div class="input-group">
+              <label for="greenInput">Greens (Nitrogen)</label>
+              <div class="stepper-container">
+                <button type="button" class="stepper-btn" onclick="adjustValue('greenInput', -1)" aria-label="Decrease Greens">−</button>
+                <input type="range" id="greenInput" min="0" max="100" value="0">
+                <button type="button" class="stepper-btn" onclick="adjustValue('greenInput', 1)" aria-label="Increase Greens">+</button>
+              </div>
+              <div class="val-display">
+                <span class="green" id="greenVal">0</span>
+                <small>parts</small>
+              </div>
+            </div>
+            
+            <div class="input-group">
+              <label for="brownInput">Browns (Carbon)</label>
+              <div class="stepper-container">
+                <button type="button" class="stepper-btn" onclick="adjustValue('brownInput', -1)" aria-label="Decrease Browns">−</button>
+                <input type="range" id="brownInput" min="0" max="100" value="0">
+                <button type="button" class="stepper-btn" onclick="adjustValue('brownInput', 1)" aria-label="Increase Browns">+</button>
+              </div>
+              <div class="val-display">
+                <span class="brown" id="brownVal">0</span>
+                <small>parts</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ratio-result" id="calcResult" aria-live="polite">
+          <div class="mood-indicator" id="moodIndicator" aria-hidden="true">🕳️</div>
+          <div class="status-badge" id="statusBadge">Empty Bin</div>
+          <p class="status-desc" id="statusDesc">Adjust the sliders to analyze your compost mix.</p>
+          
+          <div class="balance-viz">
+            <div class="viz-labels">
+              <span>Greens</span>
+              <span>Browns</span>
+            </div>
+            <div class="indicator-bar">
+              <div class="ideal-zone" title="Ideal Balance Zone"></div>
+              <div class="indicator-fill" id="indicatorFill"></div>
+            </div>
+            <div class="ratio-breakdown" id="ratioText">0% / 0%</div>
+          </div>
+
+          <div class="recommendations" id="recommendations">
+            <!-- Dynamic advice goes here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guidance">
+      <h2>Getting the Balance Right</h2>
+      <div class="guidance-grid">
+        <div class="guidance-col">
+          <h3>Green (Nitrogen)</h3>
+          <p>Greens are generally moist materials that decompose rapidly. They provide protein and moisture for the microorganisms working in your compost pile. They heat up the pile.</p>
+          
+          <h3>Brown (Carbon)</h3>
+          <p>Browns are typically dry, woody, or papery materials. They provide energy for the microbes, absorb excess moisture, and give your pile structure to maintain airflow.</p>
+          
+          <h3>Why Balance Matters</h3>
+          <p>A good compost pile needs roughly 50% greens and 50% browns. Too many greens, and the pile becomes a smelly, slimy mess. Too many browns, and decomposition slows to a halt.</p>
+        </div>
+        <div class="guidance-col">
+          <h3>Quick Tips</h3>
+          <ul class="tips-list">
+            <li><strong>Chop items smaller:</strong> Smaller pieces break down much faster because they have more surface area for microbes to attack.</li>
+            <li><strong>Mix and layer:</strong> Mix your greens and browns, or add them in alternating thin layers, always finishing with a layer of browns on top to prevent fruit flies.</li>
+            <li><strong>Keep it damp:</strong> The pile should feel like a wrung-out sponge—not soaking wet, but not bone dry.</li>
+            <li><strong>Aerate it:</strong> Turn the pile every few weeks. Microorganisms need oxygen to do their job without releasing foul odors.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Advanced Tips Collapsible -->
+      <details class="advanced-tips">
+        <summary>Advanced Tips & Troubleshooting</summary>
+        <div class="advanced-content">
+          <div class="advanced-grid">
+            <div>
+              <h4>The Squeeze Test</h4>
+              <p>Test moisture by squeezing a handful of compost: if water drips out, it's too wet (add more Browns). If it crumbs away and feels dusty, it's too dry (add a splash of water or more Greens).</p>
+            </div>
+            <div>
+              <h4>Troubleshooting Odors</h4>
+              <p><strong>Ammonia smell?</strong> Too much Nitrogen. Add carbon-rich Browns immediately. <strong>Rotten egg smell?</strong> Lack of oxygen. Turn the pile to introduce air.</p>
+            </div>
+            <div>
+              <h4>High Heat Management</h4>
+              <p>If your pile is steaming hot, it's working perfectly! However, if it stops being warm, it usually means it's finished or it needs one of the three essentials: moisture, nitrogen, or air.</p>
+            </div>
+            <div>
+              <h4>Pest Control</h4>
+              <p>To avoid flies and rodents, always 'bury' your fresh Greens under a thick layer of dry Browns (like leaves or cardboard). Never add meat, dairy, or oily foods to a standard garden pile.</p>
+            </div>
+            <div>
+              <h4>Chop to Speed Up</h4>
+              <p>Smaller pieces break down much faster. A whole pumpkin might take months, but diced pieces can vanish in weeks. Shave woody stems and tear up cardboard to maximize surface area.</p>
+            </div>
+            <div>
+              <h4>The Role of Oxygen</h4>
+              <p>Aerobic bacteria need air! Turn your pile with a pitchfork or use a compost tumbler every 1-2 weeks to prevent compaction and eliminate anaerobic "dead zones."</p>
+            </div>
+            <div>
+              <h4>Winter Composting</h4>
+              <p>Decomposition slows in cold weather. Keep your bin active by insulating it with dry leaves or burlap, and continue adding kitchen scraps to the core of the pile where heat stays longest.</p>
+            </div>
+            <div>
+              <h4>Is it Finished?</h4>
+              <p>Finished compost looks like dark, crumbly soil and has a pleasant earthy scent. If you can still recognize eggshells or stems, it likely needs more time or finer chopping.</p>
+            </div>
+            <div>
+              <h4>Invasive Weeds</h4>
+              <p>Avoid composting weeds with mature seeds (like dandelions) or persistent roots (like couch grass) unless your pile consistently reaches high temperatures (above 55°C/130°F).</p>
+            </div>
+            <div>
+              <h4>Compost 'Tea'</h4>
+              <p>Steep finished compost in water for 24-48 hours to create a nutrient-rich liquid fertilizer. Use this "tea" to water your garden or indoor plants for a natural growth boost.</p>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <footer>
+      <p><strong>Disclaimer:</strong> Compost rules can vary by system (e.g., hot composting, worm bins) and local municipal guidance.<br>Please check local recommendations if using a locally-provided green bin.</p>
+    </footer>
+  </main>
+
+  <script>
+    const ITEMS = [
+      // === GREENS (Nitrogen-Rich) ===
+      { name: "Apple cores & peels", category: "Green", note: "Common kitchen scrap; decomposes quickly." },
+      { name: "Banana peels", category: "Green", note: "Rich in potassium; chop up to speed up breakdown." },
+      { name: "Orange rinds", category: "Green", note: "Acidic; used in moderation, they are fine." },
+      { name: "Lemon & Lime halves", category: "Green", note: "Citrus is fine in most piles; avoids if vermicomposting." },
+      { name: "Grapefruit skins", category: "Green", note: "Large citrus skins should be chopped." },
+      { name: "Pear cores", category: "Green", note: "Quick to rot." },
+      { name: "Peach pits", category: "Green", note: "Very slow to decompose but purely organic." },
+      { name: "Plum pits", category: "Green", note: "Hard pits add structure; slow breakdown." },
+      { name: "Apricot pits", category: "Green", note: "Similar to plum pits." },
+      { name: "Cherry pits", category: "Green", note: "Small and easy to ignore." },
+      { name: "Strawberry tops", category: "Green", note: "Green leafy tops are great." },
+      { name: "Raspberry mush", category: "Green", note: "Old berries rot very fast." },
+      { name: "Blueberry scraps", category: "Green", note: "Old or moldy berries are fine." },
+      { name: "Blackberry stems (Green)", category: "Green", note: "Fresh green stems only." },
+      { name: "Cranberry sauce (plain)", category: "Green", note: "Avoid if it has lots of sugar/preservatives." },
+      { name: "Grape stems", category: "Green", note: "Fine to add; slightly woody." },
+      { name: "Kiwi skins", category: "Green", note: "Fuzzy skins are no problem." },
+      { name: "Mango skins & pits", category: "Green", note: "Large pits take a long time." },
+      { name: "Papaya seeds & skin", category: "Green", note: "Soft and fast-rotting." },
+      { name: "Pineapple cores & skin", category: "Green", note: "Tough; chop well." },
+      { name: "Watermelon rinds", category: "Green", note: "High water content; chop to avoid slimy mess." },
+      { name: "Cantaloupe seeds & rind", category: "Green", note: "Seeds may sprout but are fine." },
+      { name: "Honeydew melon scraps", category: "Green", note: "High moisture." },
+      { name: "Fig scraps", category: "Green", note: "Sugary and fast-rotting." },
+      { name: "Date pits", category: "Green", note: "Very hard; will last a while." },
+      { name: "Pomegranate skins", category: "Green", note: "Leathery; chop up." },
+      { name: "Persimmon tops", category: "Green", note: "Soft leafy tops." },
+      { name: "Guava scraps", category: "Green", note: "Tropical fruit waste." },
+      { name: "Lychee skins", category: "Green", note: "Thin and easy." },
+      { name: "Starfruit edges", category: "Green", note: "Fleshy fruit." },
+      { name: "Dragonfruit skin", category: "Green", note: "Soft and colorful." },
+      { name: "Passionfruit shells", category: "Green", note: "May take some time to soften." },
+      { name: "Avocado skins", category: "Green", note: "Leathery; don't break down quickly but are harmless." },
+      { name: "Avocado pits", category: "Green", note: "Slowest fruit pit; chop if possible." },
+      { name: "Tomato tops & cores", category: "Green", note: "High moisture; seeds may survive." },
+      { name: "Cucumber ends", category: "Green", note: "Very fast decomposition." },
+      { name: "Bell pepper seeds & stems", category: "Green", note: "Basic kitchen green." },
+      { name: "Hot pepper scraps", category: "Green", note: "Fine for pile; keep away from eyes when handling." },
+      { name: "Squash guts & seeds", category: "Green", note: "Pumpkin, butternut, etc." },
+      { name: "Zucchini ends", category: "Green", note: "Fleshy and moist." },
+      { name: "Eggplant scraps", category: "Green", note: "Soft sponges for moisture." },
+      { name: "Okra tips", category: "Green", note: "Slimy but good nitrogen." },
+      { name: "Lettuce leaves", category: "Green", note: "Wilted salad is perfect." },
+      { name: "Spinach stems", category: "Green", note: "Leafy greens are gold." },
+      { name: "Kale ribs", category: "Green", note: "Tougher than leaves but still Green." },
+      { name: "Chard stalks", category: "Green", note: "Colorful and nitrogen-rich." },
+      { name: "Collard greens", category: "Green", note: "Wilted or old leaves." },
+      { name: "Bok choy ends", category: "Green", note: "Crunchy green stems." },
+      { name: "Cabbage cores", category: "Green", note: "Dense; chop to help microbes." },
+      { name: "Broccoli stems", category: "Green", note: "Shave or chop to speed up." },
+      { name: "Cauliflower leaves", category: "Green", note: "Often discarded; great for compost." },
+      { name: "Brussels sprouts", category: "Green", note: "Old or outer leaves." },
+      { name: "Asparagus ends", category: "Green", note: "Woody but Green." },
+      { name: "Celery hearts", category: "Green", note: "Fibrous; chop well." },
+      { name: "Carrot tops", category: "Green", note: "The green leafy part is excellent." },
+      { name: "Parsnip scraps", category: "Green", note: "Root vegetable waste." },
+      { name: "Radish tops", category: "Green", note: "Leafy and green." },
+      { name: "Turnip skins", category: "Green", note: "Peelings from roots." },
+      { name: "Beet greens", category: "Green", note: "High in nutrients." },
+      { name: "Potato peelings", category: "Green", note: "Avoid if they have 'eyes' starting to sprout or blight." },
+      { name: "Sweet potato scraps", category: "Green", note: "Fleshy root waste." },
+      { name: "Onion skins (Inner)", category: "Green", note: "Fleshy inner parts are Green; Outer papery skins are Brown." },
+      { name: "Garlic cloves (Old)", category: "Green", note: "Smelly but fine." },
+      { name: "Shallot ends", category: "Green", note: "Small onion-like scraps." },
+      { name: "Leek greens", category: "Green", note: "The dark green tops are often composted." },
+      { name: "Scallion roots", category: "Green", note: "Small and fast." },
+      { name: "Pea pods", category: "Green", note: "Empty shells are great nitrogen." },
+      { name: "Bean scraps", category: "Green", note: "Green beans, snap peas, etc." },
+      { name: "Corn husks", category: "Green", note: "Green husks are Green; dried are Brown." },
+      { name: "Artichoke leaves", category: "Green", note: "Very tough; chop aggressively." },
+      { name: "Fennel fronds", category: "Green", note: "Aromatic green." },
+      { name: "Rhubarb leaves", category: "Green", note: "Safe for compost; microbes don't mind the oxalic acid." },
+      { name: "Radicchio leaves", category: "Green", note: "Purple/green salad waste." },
+      { name: "Endive scraps", category: "Green", note: "Leafy bitter greens." },
+      { name: "Watercress stems", category: "Green", note: "Aquatic green." },
+      { name: "Arugula", category: "Green", note: "Leftover salad." },
+      { name: "Mustard greens", category: "Green", note: "Spicy greens." },
+      { name: "Microgreens (Old)", category: "Green", note: "Tiny and fast-rotting." },
+      { name: "Grass clippings (Fresh)", category: "Green", note: "High nitrogen; mix with browns to avoid stench." },
+      { name: "Weeds (No seeds)", category: "Green", note: "Dandelions, chickweed, etc. before they flower." },
+      { name: "Green leaves (Fresh)", category: "Green", note: "From garden pruning." },
+      { name: "Flower petals", category: "Green", note: "Roses, lilies, etc." },
+      { name: "Wilted bouquets", category: "Green", note: "Remove any wire or floral foam." },
+      { name: "Herb scraps", category: "Green", note: "Basil, cilantro, parsley stems." },
+      { name: "Seaweed (Rinsed)", category: "Green", note: "Rinse salt off first." },
+      { name: "Kelp", category: "Green", note: "Ocean nitrogen source." },
+      { name: "Algae", category: "Green", note: "From birdbaths or ponds." },
+      { name: "Moss (Green)", category: "Green", note: "Garden moss." },
+      { name: "Clover (Fresh)", category: "Green", note: "Nitrogen fixer." },
+      { name: "Alfalfa meal", category: "Green", note: "Used as a compost starter." },
+      { name: "Spent coffee grounds", category: "Green", note: "Nitrogen-rich despite the color." },
+      { name: "Tea leaves", category: "Green", note: "Loose leaf is best." },
+      { name: "Tea bags (Natural fiber)", category: "Green", note: "Check for staples and plastic content." },
+      { name: "Human hair", category: "Green", note: "Slow to break down but high nitrogen." },
+      { name: "Pet fur", category: "Green", note: "From dogs/cats (untreated with flea meds)." },
+      { name: "Chicken manure", category: "Green", note: "Very 'hot'; must be balanced with browns." },
+      { name: "Rabbit manure", category: "Green", note: "Can go directly in or composted." },
+      { name: "Cow manure", category: "Green", note: "Standard farm green." },
+      { name: "Horse manure", category: "Green", note: "Great bulk nitrogen." },
+      { name: "Sheep manure", category: "Green", note: "Small pellets, high nitrogen." },
+      { name: "Goat manure", category: "Green", note: "Similar to sheep manure." },
+      { name: "Feathers (Natural)", category: "Green", note: "From old pillows or poultry." },
+      { name: "Cooked pasta (Plain)", category: "Green", note: "No sauce, oils, or salt." },
+      { name: "Cooked rice (Plain)", category: "Green", note: "Small amounts to avoid attracting pests." },
+      { name: "Old bread (No seeds)", category: "Green", note: "Bury deep if adding." },
+      { name: "Tofu scraps", category: "Green", note: "Plant protein is nitrogen-rich." },
+      { name: "Tempeh bits", category: "Green", note: "Fermented soy waste." },
+      { name: "Edamame shells", category: "Green", note: "Soybean pods." },
+      { name: "Lentil scraps", category: "Green", note: "Cooked plain pulses." },
+      { name: "Chickpea waste", category: "Green", note: "Hummus-related scraps (no oils)." },
+      { name: "Pumpkin guts", category: "Green", note: "Halloween classic." },
+      { name: "Gourd scraps", category: "Green", note: "Decorative gourds when they rot." },
+      { name: "Hops (Spent)", category: "Green", note: "From home brewing." },
+      { name: "Vetch", category: "Green", note: "Cover crop green." },
+      { name: "Buckwheat (Green)", category: "Green", note: "Garden cover crop." },
+      { name: "Urine (Diluted)", category: "Green", note: "High nitrogen; use 1:10 ratio with water or add to browns." },
+      { name: "Liquid from canned veggies", category: "Green", note: "Only if unsalted and no additives." },
+      { name: "Fruit juice (Old)", category: "Green", note: "Dilute well; attracts bees/flies." },
+      { name: "Soy milk (Expired)", category: "Green", note: "Small amounts only." },
+      { name: "Beer (Flat)", category: "Green", note: "Nourishes bacteria; use in moderation." },
+      { name: "Wine (Leftover)", category: "Green", note: "Small amounts are fine." },
+      { name: "Stale crackers", category: "Green", note: "Basic grain waste." },
+      { name: "Oatmeal (Plain/Spent)", category: "Green", note: "Leftover breakfast." },
+      { name: "Cornmeal", category: "Green", note: "Can attract pests if not buried." },
+      { name: "Brussels sprouts stems", category: "Green", note: "Chop into small pieces." },
+      { name: "Grape skins", category: "Green", note: "Leftover from juice or snacking." },
+      { name: "Watermelon seeds", category: "Green", note: "Tough but organic." },
+      { name: "Cantaloupe seeds", category: "Green", note: "Often found in 'guts'." },
+      { name: "Honeydew seeds", category: "Green", note: "High moisture." },
+      { name: "Squash seeds", category: "Green", note: "Pumpkin, acorn, etc." },
+      { name: "Cucumber peels", category: "Green", note: "Fastest rotting green." },
+      { name: "Carrot skins", category: "Green", note: "Peeled for salads." },
+      { name: "Parsnip peelings", category: "Green", note: "Root waste." },
+      { name: "Beet skins", category: "Green", note: "Stains everything but good nitrogen." },
+      { name: "Radish skins", category: "Green", note: "Peppery and fast." },
+      { name: "Onion hearts", category: "Green", note: "Fleshy inner onion." },
+      { name: "Garlic skins (Inner)", category: "Green", note: "Fleshy inner part." },
+      { name: "Shallot skins (Inner)", category: "Green", note: "Small and moist." },
+      { name: "Leek hearts", category: "Green", note: "Soft inner leek." },
+      { name: "Asparagus tips", category: "Green", note: "Soft and fast." },
+      { name: "Broccoli florets (Old)", category: "Green", note: "Yellowing broccoli." },
+      { name: "Cauliflower florets (Old)", category: "Green", note: "Browning cauliflower." },
+      { name: "Cabbage leaves (Outer)", category: "Green", note: "Usually the dirtiest leaves." },
+      { name: "Spinach (Wilted)", category: "Green", note: "Salad bag liquid if not careful." },
+      { name: "Lettuce (Slimy)", category: "Green", note: "Old salad." },
+      { name: "Kale (Yellowed)", category: "Green", note: "Nitrogen rich." },
+      { name: "Chard (Wilted)", category: "Green", note: "Stalks are fine too." },
+      { name: "Collards (Old)", category: "Green", note: "Tough but nitrogenous." },
+      { name: "Bok Choy (Soft)", category: "Green", note: "High water." },
+      { name: "Escarole scraps", category: "Green", note: "Leafy green." },
+      { name: "Endive (Bitter)", category: "Green", note: "Fine to add." },
+      { name: "Frisee scraps", category: "Green", note: "Light and leafy." },
+      { name: "Radicchio (Old)", category: "Green", note: "Purple nitrogen." },
+      { name: "Arugula (Slimy)", category: "Green", note: "Aromatic green." },
+      { name: "Watercress (Wilted)", category: "Green", note: "Aquatic nitrogen." },
+      { name: "Cress (Old)", category: "Green", note: "Tiny and fast." },
+      { name: "Sprouts (Expired)", category: "Green", note: "Alfalfa, bean, etc." },
+      { name: "Microgreens (Spent)", category: "Green", note: "Quickest decomposition." },
+      { name: "Basil (Wilted)", category: "Green", note: "Fragrant nitrogen." },
+      { name: "Cilantro (Slimy)", category: "Green", note: "Stems are gold." },
+      { name: "Parsley (Wilted)", category: "Green", note: "Common kitchen green." },
+      { name: "Dill (Old)", category: "Green", note: "Light and feathery." },
+      { name: "Mint (Fresh)", category: "Green", note: "Can be invasive if it has roots." },
+      { name: "Sage (Wilted)", category: "Green", note: "Fuzzy nitrogen." },
+      { name: "Rosemary (Green)", category: "Green", note: "Woody green." },
+      { name: "Thyme (Fresh)", category: "Green", note: "Small and fast." },
+      { name: "Oregano (Wilted)", category: "Green", note: "Aromatic green." },
+      { name: "Marjoram (Old)", category: "Green", note: "Similar to oregano." },
+      { name: "Tarragon (Wilted)", category: "Green", note: "Licorice-like nitrogen." },
+      { name: "Chives (Old)", category: "Green", note: "Onion-like nitrogen." },
+      { name: "Bay leaves (Fresh)", category: "Green", note: "Very slow breakdown." },
+      { name: "Lemon balm (Fresh)", category: "Green", note: "Fragrant nitrogen." },
+      { name: "Lavender flowers", category: "Green", note: "Great for scent." },
+      { name: "Calendula flowers", category: "Green", note: "Vibrant nitrogen." },
+      { name: "Nasturtium leaves", category: "Green", note: "Pungent and green." },
+      { name: "Dandelion leaves (Fresh)", category: "Green", note: "No seeds!" },
+      { name: "Chickweed (Fresh)", category: "Green", note: "Common garden green." },
+      { name: "Plantain leaves (Fresh)", category: "Green", note: "Broadleaf weed." },
+      { name: "Purslane (Fresh)", category: "Green", note: "Succulent green." },
+      { name: "Lamb's quarters", category: "Green", note: "Nutritionally dense weeds." },
+      { name: "Pigweed (Fresh)", category: "Green", note: "Amaranth family." },
+      { name: "Nettle (Fresh)", category: "Green", note: "Wear gloves! High nitrogen." },
+      { name: "Comfrey leaves", category: "Green", note: "Superfood for compost." },
+      { name: "Spent mushroom substrate", category: "Green", note: "Rich in mycelium and nitrogen." },
+      { name: "Mushroom scraps", category: "Green", note: "Quick to rot." },
+      { name: "Turnip greens", category: "Green", note: "Garden fresh green." },
+      { name: "Kohlrabi greens", category: "Green", note: "Tough but Green." },
+      { name: "Mustard seeds (Old)", category: "Green", note: "Small and fast." },
+      { name: "Sesame seeds (Expired)", category: "Green", note: "Oily but okay in small amounts." },
+      { name: "Pumpkin seeds (Raw)", category: "Green", note: "Might sprout; chop if worried." },
+      { name: "Sunflower seeds (Raw)", category: "Green", note: "Rich in fats/nitrogen." },
+      { name: "Poppy seeds (Old)", category: "Green", note: "Micro-nitrogen." },
+      { name: "Chia seeds (Expired)", category: "Green", note: "Gelatinous when wet." },
+      { name: "Flax seeds (Old)", category: "Green", note: "Nutrient dense." },
+      { name: "Hemp seeds (Spent)", category: "Green", note: "High protein nitrogen." },
+      { name: "Quinoa (Cooked plain)", category: "Green", note: "Grain waste." },
+      { name: "Couscous (Plain leftover)", category: "Green", note: "Wheat based nitrogen." },
+      { name: "Bulgur (Leftover)", category: "Green", note: "Grain nitrogen." },
+      { name: "Millet (Old)", category: "Green", note: "Bird seed green." },
+      { name: "Farro (Cooked plain)", category: "Green", note: "Chewy nitrogen." },
+      { name: "Barley (Spent)", category: "Green", note: "Brewing byproduct." },
+      { name: "Rye (Cooked plain)", category: "Green", note: "Heavy grain waste." },
+      { name: "Oats (Soggy)", category: "Green", note: "Leftover oatmeal." },
+      { name: "Corn kernels (Expired)", category: "Green", note: "High starch." },
+      { name: "Popcorn (Unpopped)", category: "Green", note: "Hard nitrogen." },
+      { name: "Popcorn (Popped/Plain)", category: "Green", note: "Airy carbon/nitrogen mix." },
+      { name: "Taco shells (Plain)", category: "Green", note: "Corn based." },
+      { name: "Tortillas (Corn/Expired)", category: "Green", note: "Soft nitrogen." },
+      { name: "Tortillas (Flour/Expired)", category: "Green", note: "Wheat nitrogen." },
+      { name: "Bagel bits (Plain/Moldy)", category: "Green", note: "No toppings." },
+      { name: "Muffin crumbs (Plain)", category: "Green", note: "Basic flour waste." },
+      { name: "Pancake scraps (Plain)", category: "Green", note: "Egg/Flour nitrogen." },
+      { name: "Waffle bits (Plain)", category: "Green", note: "Breakfast waste." },
+      { name: "Pizza crust (Clean)", category: "Green", note: "Baked dough." },
+      { name: "Pretzel bits (Unsalted)", category: "Green", note: "Baked wheat." },
+      { name: "Pita bread (Old)", category: "Green", note: "Pocket bread nitrogen." },
+      { name: "Naan (Plain/Old)", category: "Green", note: "Yogurt/Flour nitrogen." },
+      { name: "Matzo (Expired)", category: "Green", note: "Unleavened nitrogen." },
+      { name: "Crackers (Plain/Stale)", category: "Green", note: "Salty, rinse if possible." },
+      { name: "Rice cakes (Plain)", category: "Green", note: "Airy rice waste." },
+      { name: "Seaweed snacks (Plain)", category: "Green", note: "Thin nitrogen sheets." },
+      { name: "Nori scraps", category: "Green", note: "Sushi grade nitrogen." },
+      { name: "Agar agar (Spent)", category: "Green", note: "Gelatinous nitrogen." },
+      { name: "Jello (Plain/Expired)", category: "Green", note: "Animal protein nitrogen." },
+      { name: "Gelatin (Unflavored)", category: "Green", note: "Pure nitrogen." },
+      { name: "Pudding (Plain/Expired)", category: "Green", note: "Dairy/Starch nitrogen." },
+      { name: "Custard bits (Plain)", category: "Green", note: "Egg nitrogen." },
+      { name: "Tofu dregs (Okara)", category: "Green", note: "Soy byproduct." },
+      { name: "Soy pulp", category: "Green", note: "High protein green." },
+      { name: "Almond pulp (Spent)", category: "Green", note: "From nut milk." },
+      { name: "Nut milk residues", category: "Green", note: "Dilute if adding." },
+      { name: "Alfalfa sprouts (Expired)", category: "Green", note: "Fast rotting nitrogen." },
+      { name: "Bean sprouts (Old)", category: "Green", note: "Common kitchen green." },
+      { name: "Bamboo shoots (Fresh)", category: "Green", note: "Young bamboo is Green." },
+      { name: "Bok choy cores", category: "Green", note: "Dense nitrogen." },
+      { name: "Clover clippings (Fresh)", category: "Green", note: "Nitrogen fixing green." },
+      { name: "Comfrey (Chopped)", category: "Green", note: "Compost supercharger." },
+      { name: "Dandelion flowers (No seeds)", category: "Green", note: "Bright nitrogen." },
+      { name: "Duck manure", category: "Green", note: "Hot manure; use with browns." },
+      { name: "Honeydew skins", category: "Green", note: "Melon waste." },
+      { name: "Kelp meal", category: "Green", note: "Ocean mineral green." },
+      { name: "Lima bean pods", category: "Green", note: "Shelling waste." },
+      { name: "Mustard greens (Wilted)", category: "Green", note: "Spicy nitrogen." },
+      { name: "Okra trimmings", category: "Green", note: "Slimy but good." },
+      { name: "Seaweed (Washed)", category: "Green", note: "Rinse salt off first." },
+      { name: "Soybeans (Plain)", category: "Green", note: "Protein rich nitrogen." },
+      { name: "Valerian root", category: "Green", note: "Garden herb." },
+      { name: "Winter squash peels", category: "Green", note: "Acorn, Butternut, etc." },
+      { name: "Wheatgrass (Spent)", category: "Green", note: "After juicing." },
+      { name: "Yeast (Expired)", category: "Green", note: "Active microbes love it." },
+      { name: "Yucca peels", category: "Green", note: "Tough green." },
+      
+      // === BROWNS (Carbon-Rich) ===
+      { name: "Dry leaves (Maple)", category: "Brown", note: "Classic carbon." },
+      { name: "Dry leaves (Oak)", category: "Brown", note: "Thicker leaves; shred for faster results." },
+      { name: "Dry leaves (Ash)", category: "Brown", note: "Good carbon source." },
+      { name: "Dry leaves (Birch)", category: "Brown", note: "Quick to crumble." },
+      { name: "Dry leaves (Beech)", category: "Brown", note: "Waxy but fine." },
+      { name: "Dry leaves (Cherry)", category: "Brown", note: "Common garden leaves." },
+      { name: "Dry leaves (Elm)", category: "Brown", note: "Autumn staple." },
+      { name: "Dry leaves (Poplar)", category: "Brown", note: "Light and easy." },
+      { name: "Dry leaves (Cottonwood)", category: "Brown", note: "Large leaves; shred them." },
+      { name: "Pine needles (Dried)", category: "Brown", note: "Acidic; use in moderation." },
+      { name: "Pine cones", category: "Brown", note: "Very slow; crush them if possible." },
+      { name: "Dry grass / Straw", category: "Brown", note: "Great for aeration." },
+      { name: "Hay (Seedless)", category: "Brown", note: "Feeding hay can have seeds; bedding is better." },
+      { name: "Corn stalks (Dry)", category: "Brown", note: "Chop into bits." },
+      { name: "Corn cobs (Dry)", category: "Brown", note: "Chopping is a must for these." },
+      { name: "Twigs (Small)", category: "Brown", note: "Pencil sized or smaller." },
+      { name: "Wood chips (Untreated)", category: "Brown", note: "Slow to break down; adds air." },
+      { name: "Sawdust (Untreated)", category: "Brown", note: "Sprinkle thin layers." },
+      { name: "Wood shavings (Pet bedding)", category: "Brown", note: "Ensure it's from untreated wood." },
+      { name: "Bark mulch", category: "Brown", note: "Slow carbon." },
+      { name: "Bamboo skewers", category: "Brown", note: "Break them up." },
+      { name: "Chopsticks (Wooden)", category: "Brown", note: "Untreated wood only." },
+      { name: "Cardboard (Corrugated)", category: "Brown", note: "Best brown resource." },
+      { name: "Cereal boxes", category: "Brown", note: "Remove plastic inner liners." },
+      { name: "Egg cartons (Paper)", category: "Brown", note: "Tear into pieces." },
+      { name: "Toilet paper rolls", category: "Brown", note: "Easy to shred by hand." },
+      { name: "Paper towel rolls", category: "Brown", note: "Clean cardboard only." },
+      { name: "Brown paper bags", category: "Brown", note: "Classic brown material." },
+      { name: "Envelopes (No window)", category: "Brown", note: "Plain paper only." },
+      { name: "Shredded office paper", category: "Brown", note: "Avoid white bleached or glossy paper if possible." },
+      { name: "Newspaper (Black/White)", category: "Brown", note: "Soy inks are safe; avoid color ads." },
+      { name: "Construction paper", category: "Brown", note: "Kid's craft waste." },
+      { name: "Tissue paper (Plain)", category: "Brown", note: "Uncoated only." },
+      { name: "Crepe paper", category: "Brown", note: "Birthday party waste." },
+      { name: "Paper napkins", category: "Brown", note: "As long as they aren't greasy." },
+      { name: "Paper towels", category: "Brown", note: "Unless used with cleaners." },
+      { name: "Paper plates (Uncoated)", category: "Brown", note: "Plain white paper plates." },
+      { name: "Coffee filters", category: "Brown", note: "Paper filters are perfect browns." },
+      { name: "Cupcake liners (Paper)", category: "Brown", note: "Unwaxed only." },
+      { name: "Pizza boxes (Clean parts)", category: "Brown", note: "Tear off parts with no grease." },
+      { name: "Wine corks (Natural)", category: "Brown", note: "Must be real cork, not plastic." },
+      { name: "Matchsticks (Used)", category: "Brown", note: "Small wood bits." },
+      { name: "Burlap (Jute/Hemp)", category: "Brown", note: "Natural fibers only." },
+      { name: "Cotton scraps (100%)", category: "Brown", note: "Cut into small shreds." },
+      { name: "Wool scraps (100%)", category: "Brown", note: "Natural wool only." },
+      { name: "Linen scraps (100%)", category: "Brown", note: "Ancient flax fiber." },
+      { name: "Silk scraps (100%)", category: "Brown", note: "Natural silk thread." },
+      { name: "String/Twine (Jute)", category: "Brown", note: "Check for synthetic cores." },
+      { name: "Walnut shells (Crushed)", category: "Brown", note: "Slow but carbon-rich." },
+      { name: "Peanut shells", category: "Brown", note: "Classic brown." },
+      { name: "Pistachio shells", category: "Brown", note: "Wash off salt first." },
+      { name: "Sunflower seed shells", category: "Brown", note: "Bird feeder waste." },
+      { name: "Pumpkin seed shells", category: "Brown", note: "Dry and crunchy." },
+      { name: "Acorns", category: "Brown", note: "Crush them to help microbes." },
+      { name: "Pecan shells", category: "Brown", note: "Southern brown staple." },
+      { name: "Almond shells", category: "Brown", note: "Hard but organic." },
+      { name: "Hazelnut shells", category: "Brown", note: "Very slow breakdown." },
+      { name: "Dryer lint (Natural only)", category: "Brown", note: "Do not use if washing synthetics." },
+      { name: "Vacuum bag content", category: "Brown", note: "Only if you have natural rugs/dust." },
+      { name: "Old potting soil", category: "Brown", note: "Spent soil adds bulk." },
+      { name: "Peat moss (Dry)", category: "Brown", note: "Highly absorbent." },
+      { name: "Coir (Coconut fiber)", category: "Brown", note: "Great peat alternative." },
+      { name: "Abandoned bird nests", category: "Brown", note: "Twigs and mud." },
+      { name: "Eggshells (Dried)", category: "Brown", note: "Calcium source; often grouped with browns for structure." },
+      { name: "Nut husk (Cocoa)", category: "Brown", note: "Aromatic carbon." },
+      { name: "Wheat bran (Old)", category: "Brown", note: "Dry carbon source." },
+      { name: "Rice hulls", category: "Brown", note: "Often used in potting mixes." },
+      { name: "Peanut butter jars (Lidless paper parts)", category: "Brown", note: "Clean only." },
+      { name: "Bird feathers (Down)", category: "Brown", note: "Lightweight nitrogen/carbon mix." },
+      { name: "Cotton balls (100% cotton)", category: "Brown", note: "Pure natural fiber." },
+      { name: "Cotton swabs (Paper stick)", category: "Brown", note: "Eco-friendly bathroom waste." },
+      { name: "Cardboard tubes (Inner)", category: "Brown", note: "Foil wrap or paper towels." },
+      { name: "Cardboard shippers", category: "Brown", note: "Remove all plastic tape first." },
+      { name: "Cardboard spacers", category: "Brown", note: "Product packaging waste." },
+      { name: "Paper berry baskets", category: "Brown", note: "Farmer's market waste." },
+      { name: "Paper coffee sleeves", category: "Brown", note: "Coffee shop brown." },
+      { name: "Paper straws (Used)", category: "Brown", note: "Check for plastic coating." },
+      { name: "Paper cupcake liners", category: "Brown", note: "Uncoated ones only." },
+      { name: "Paper candy wrappers", category: "Brown", note: "Plain paper only, no foil." },
+      { name: "Paper lunch bags", category: "Brown", note: "Classic brown." },
+      { name: "Paper grocery bags", category: "Brown", note: "Shred for nesting." },
+      { name: "Paper flour bags", category: "Brown", note: "Dust off excess flour." },
+      { name: "Paper sugar bags", category: "Brown", note: "Rinse sugar if possible." },
+      { name: "Paper mail (No plastic)", category: "No window envelopes." },
+      { name: "Paper calendars (Matte)", category: "Brown", note: "Avoid glossy ones." },
+      { name: "Paper worksheets (Old)", category: "Brown", note: "School waste." },
+      { name: "Paper coloring pages", category: "Brown", note: "Crayon is okay in tiny amounts." },
+      { name: "Paper sketchbook pages", category: "Brown", note: "Graphite/charcoal is fine." },
+      { name: "Paper notepad pages", category: "Brown", note: "Basic office brown." },
+      { name: "Paper sticky notes", category: "Brown", note: "Small glue strip is negligible." },
+      { name: "Paper index cards", category: "Brown", note: "Uncoated cardstock." },
+      { name: "Paper streamers (Matte)", category: "Brown", note: "Party waste." },
+      { name: "Paper tissue (Facial)", category: "Brown", note: "Clean only, no lotions." },
+      { name: "Paper toilet tissue", category: "Brown", note: "Clean only." },
+      { name: "Paper napkins (Unused/Clean)", category: "Brown", note: "Picnic waste." },
+      { name: "Paper tablecloths (Paper)", category: "Brown", note: "Disposable picnic gear." },
+      { name: "Paper confetti (Matte)", category: "Brown", note: "Non-metallic only." },
+      { name: "Paper book pages (Old)", category: "Brown", note: "Check for safe inks." },
+      { name: "Paper ledger pages", category: "Brown", note: "Vintage office brown." },
+      { name: "Paper graph paper", category: "Brown", note: "Standard office waste." },
+      { name: "Paper sheet music", category: "Brown", note: "Non-glossy." },
+      { name: "Paper catalogs (Matte)", category: "Brown", note: "Avoid shiny covers." },
+      { name: "Paper telephone books", category: "Brown", note: "The yellow pages are brown!" },
+      { name: "Paper menus (Takeout)", category: "Brown", note: "Plain paper." },
+      { name: "Paper brochures (Matte)", category: "Brown", note: "Check the ink/coating." },
+      { name: "Paper business cards (Matte)", category: "Brown", note: "No plastic laminates." },
+      { name: "Paper bookmarks (Matte)", category: "Brown", note: "Plain cardstock." },
+      { name: "Paper coasters (Cardboard)", category: "Brown", note: "Clean only." },
+      { name: "Paper popcorn bags", category: "Brown", note: "No grease preferred." },
+      { name: "Paper peanut bags", category: "Brown", note: "Circus/Stadium brown." },
+      { name: "Paper flour dusting", category: "Brown", note: "From baking prep." },
+      { name: "Paper tea tags", category: "Brown", note: "Small and fast." },
+      { name: "Paper wine labels", category: "Brown", note: "Soaked off bottles." },
+      { name: "Paper cigar bands", category: "Brown", note: "Tiny brown scrap." },
+      { name: "Paper gum wrappers (Inner)", category: "Brown", note: "Paper part only." },
+      { name: "Paper cigarette packs (Inner)", category: "Brown", note: "Plain paper lining." },
+      { name: "Paper band-aid boxes", category: "Brown", note: "Empty cardboard." },
+      { name: "Paper toothpaste boxes", category: "Brown", note: "Thin cardboard." },
+      { name: "Paper medicine boxes", category: "Brown", note: "Pharmaceutical brown." },
+      { name: "Paper cereal inserts (Paper)", category: "Brown", note: "If not plastic." },
+      { name: "Paper shoe box tissue", category: "Brown", note: "Very thin and fast." },
+      { name: "Paper gift wrap (Matte)", category: "Brown", note: "No metallic/glitter." },
+      { name: "Paper shredded documents", category: "Brown", note: "Standard security brown." },
+      { name: "Paper receipts (Non-thermal)", category: "Brown", note: "Thermal paper has BPA; avoid it." },
+      { name: "Paper ledger sheets", category: "Brown", note: "Classic office supply." },
+      { name: "Paper architectural plans", category: "Brown", note: "Blueprints vary; check ink." },
+      { name: "Paper newspaper (Shredded)", category: "Brown", note: "Adds great surface area." },
+      { name: "Paper flyers (Matte)", category: "Brown", note: "Neighborhood brown." },
+      { name: "Paper receipts (Thermal - AVOID)", category: "Brown", note: "Warning: Thermal paper contains BPA." },
+      { name: "Paper envelopes (Security pattern)", category: "Brown", note: "Patterned brown." },
+      { name: "Paper bills (Old)", category: "Brown", note: "Personal brown." },
+      { name: "Paper tax forms (Old)", category: "Brown", note: "Federal brown." },
+      { name: "Paper junk mail (Shredded)", category: "Brown", note: "Bulk carbon." },
+      { name: "Paper coloring books", category: "Brown", note: "Childhood brown." },
+      { name: "Paper crossword books", category: "Brown", note: "Puzzle brown." },
+      { name: "Paper sudoku pages", category: "Brown", note: "Math brown." },
+      { name: "Paper origami scraps", category: "Brown", note: "Folded brown." },
+      { name: "Paper paper planes", category: "Brown", note: "Flightless brown." },
+      { name: "Paper snowflakes", category: "Brown", note: "Winter brown." },
+      { name: "Paper chains", category: "Brown", note: "Party brown." },
+      { name: "Paper crowns", category: "Brown", note: "Royal brown." },
+      { name: "Paper mats (Restaurant)", category: "Brown", note: "Dining brown." },
+      { name: "Paper placemats (Kids)", category: "Brown", note: "Art brown." },
+      { name: "Paper bookmarks (Handmade)", category: "Brown", note: "Creative brown." },
+      { name: "Paper tags (Clothing)", category: "Brown", note: "Retail brown." },
+      { name: "Paper price tags", category: "Brown", note: "Shopping brown." },
+      { name: "Paper tea boxes", category: "Brown", note: "Infused brown." },
+      { name: "Paper tissue boxes", category: "Brown", note: "Cold season brown." },
+      { name: "Paper shoe boxes", category: "Brown", note: "Footwear brown." },
+      { name: "Paper gift boxes", category: "Brown", note: "Holiday brown." },
+      { name: "Paper jewelry boxes", category: "Brown", note: "Small brown." },
+      { name: "Paper shipping labels (Plain)", category: "Brown", note: "Logistics brown." },
+      { name: "Paper packing tape (Paper)", category: "Brown", note: "Adhesive brown." },
+      { name: "Paper masking tape (Paper)", category: "Brown", note: "Painter's brown." },
+      { name: "Paper washi tape (Paper)", category: "Brown", note: "Decorative brown." },
+      { name: "Paper doilies", category: "Brown", note: "Lacy brown." },
+      { name: "Paper lanterns (Paper)", category: "Brown", note: "Ambient brown." },
+      { name: "Paper cranes (Paper)", category: "Brown", note: "Peaceful brown." },
+      { name: "Paper fans (Paper)", category: "Brown", note: "Cool brown." },
+      { name: "Paper umbrellas (Drink)", category: "Brown", note: "Cocktail brown." },
+      { name: "Paper cupcake stands", category: "Brown", note: "Sweet brown." },
+      { name: "Paper doorknob hangers", category: "Brown", note: "Hotel brown." },
+      { name: "Paper coasters (Bar)", category: "Brown", note: "Pub brown." },
+      { name: "Paper beer mats", category: "Brown", note: "Beverage brown." },
+      { name: "Paper wine bags", category: "Brown", note: "Bottled brown." },
+      { name: "Paper flour sacks", category: "Brown", note: "Baking brown." },
+      { name: "Paper sugar sacks", category: "Brown", note: "Grained brown." },
+      { name: "Paper rice bags (Paper)", category: "Brown", note: "Carb brown." },
+      { name: "Paper charcoal bags (Outer)", category: "Brown", note: "Grill brown." },
+      { name: "Paper pet food bags (Paper)", category: "Brown", note: "Animal brown." },
+      { name: "Paper bird seed bags (Paper)", category: "Brown", note: "Aviary brown." },
+      { name: "Paper seed packets", category: "Brown", note: "Gardening brown." },
+      { name: "Paper garden labels (Paper)", category: "Brown", note: "Organic brown." },
+      { name: "Paper soil bags (Paper)", category: "Brown", note: "Dirty brown." },
+      { name: "Paper mulch bags (Paper)", category: "Brown", note: "Covered brown." },
+      { name: "Paper lawn bags (Paper)", category: "Brown", note: "Yard brown." },
+      { name: "Bamboo toothbrushes (No bristles)", category: "Brown", note: "Natural bamboo body." },
+      { name: "Brown paper towels (Clean)", category: "Brown", note: "Public restroom type." },
+      { name: "Cardboard egg boxes (Torn)", category: "Brown", note: "Grey mulched cardboard." },
+      { name: "Cherry pits (Dried)", category: "Brown", note: "Slow to rot." },
+      { name: "Coconut husks (Coir)", category: "Brown", note: "Great for aeration." },
+      { name: "Cork (Natural stopper)", category: "Brown", note: "Classic wood brown." },
+      { name: "Cotton thread (100% natural)", category: "Brown", note: "Small amounts only." },
+      { name: "Dried corn husks", category: "Brown", note: "Leathery carbon." },
+      { name: "Eucalyptus leaves (Dried)", category: "Brown", note: "Small amounts; waxy." },
+      { name: "Nectarine pits", category: "Brown", note: "Hard wood pits." },
+      { name: "Hemp rope bits", category: "Brown", note: "Natural hemp only." },
+      { name: "Jute twine", category: "Brown", note: "Classic garden brown." },
+      { name: "Loofah (Natural sponge)", category: "Brown", note: "Comes from a gourd!" },
+      { name: "Macadamia shells", category: "Brown", note: "Hardest nut shell; crush it." },
+      { name: "Paper streamers (Degradable)", category: "Brown", note: "Check matte finish." },
+      { name: "Raffia", category: "Brown", note: "Palm leaf brown." },
+      { name: "Shredded maps (Matte)", category: "Brown", note: "Paper maps." },
+      { name: "Straw hats (Natural fiber)", category: "Brown", note: "Tear into pieces." },
+      { name: "Wine corks (Wood)", category: "Brown", note: "Real cork only." },
+      { name: "Wood ash (Hardwood)", category: "Brown", note: "Use sparingly; raises pH." },
+      { name: "Cedar wood chips", category: "Brown", note: "Resistant to rot; use small amounts." },
+      
+      // === NO (AVOID / NON-COMPOSTABLE) ===
+      { name: "Beef scraps", category: "Avoid", note: "Meat scrap that attracts pests." },
+      { name: "Pork fat", category: "Avoid", note: "Meat fat with rancid odors and slow breakdown." },
+      { name: "Chicken bones", category: "Avoid", note: "Meat bones that attract animals and won't break down at home." },
+      { name: "Fish heads", category: "Avoid", note: "Meat/Fish with strong smell; attracts cats/rodents." },
+      { name: "Lamb trimmings", category: "Avoid", note: "Meat that is greasy and problematic." },
+      { name: "Steak bones", category: "Avoid", note: "Large meat bones won't decompose in a backyard bin." },
+      { name: "Pork ribs", category: "Avoid", note: "Meat bones that will persist for years and attract scavengers." },
+      { name: "Turkey carcasses", category: "Avoid", note: "Large collection of meat bones and fat, attracts vermin." },
+      { name: "Fish skin / fish bones", category: "Avoid", note: "Meat/fish waste that goes putrid quickly." },
+      { name: "Venison scraps", category: "Avoid", note: "Raw or cooked wild meat scraps." },
+      { name: "Sausage casings", category: "Avoid", note: "Processed meat products." },
+      { name: "Ham bones", category: "Avoid", note: "Meat bones that attract pests." },
+      { name: "Deli meat", category: "Avoid", note: "Processed meat and cold cuts." },
+      { name: "Raw chicken", category: "Avoid", note: "Raw meat poses severe salmonella hazard in compost." },
+      { name: "Cooked meat leftovers", category: "Avoid", note: "Cooked meat still rots and draws scavengers." },
+      { name: "Meat gravy", category: "Avoid", note: "Meat fat and juices smother aerobic bacteria." },
+      { name: "Bacon grease", category: "Avoid", note: "Meat/fat that coats materials, halting decomposition." },
+      { name: "T-bone fragments", category: "Avoid", note: "Heavy meat bones." },
+      { name: "Ribeye bones", category: "Avoid", note: "Greasy meat bones." },
+      { name: "Milk", category: "Avoid", note: "Attracts flies and can sour the pile." },
+      { name: "Cheese", category: "Avoid", note: "Mold issues and pests." },
+      { name: "Yogurt", category: "Avoid", note: "Dairy pathogens in home bins." },
+      { name: "Butter / Margarine", category: "Avoid", note: "Pure fat; smothers microbes." },
+      { name: "Whole eggs", category: "Avoid", note: "Rotten egg smell is inevitable." },
+      { name: "Lard", category: "Avoid", note: "Animal fat attracts vermin." },
+      { name: "Vegetable oil", category: "Avoid", note: "Coats organic matter, blocking air." },
+      { name: "Olive oil", category: "Avoid", note: "Similar to other oils." },
+      { name: "Used cooking grease", category: "Avoid", note: "Clogs the composting process." },
+      { name: "Dog waste", category: "Avoid", note: "Pathogens (Roundworms, etc.)" },
+      { name: "Cat waste", category: "Avoid", note: "Toxoplasmosis risk." },
+      { name: "Pig manure", category: "Avoid", note: "Can harbor human-sharable diseases." },
+      { name: "Diapers (Disposable)", category: "Avoid", note: "Plastic, gel, and human waste." },
+      { name: "Human waste", category: "Avoid", note: "Safety/Health hazard." },
+      { name: "Cat litter (Clay)", category: "Avoid", note: "Does not decompose." },
+      { name: "Coal ash", category: "Avoid", note: "Contains heavy metals." },
+      { name: "Charcoal briquettes", category: "Avoid", note: "Contain chemical binders." },
+      { name: "Pressure-treated wood", category: "Avoid", note: "Arsenic and other poisons." },
+      { name: "Plywood scraps", category: "Avoid", note: "Contain toxic glues." },
+      { name: "Particle board", category: "Avoid", note: "Formaldehyde and glues." },
+      { name: "Glossy magazines", category: "Avoid", note: "Plastic coatings and toxic inks." },
+      { name: "Plastic-coated paper", category: "Avoid", note: "Coffee cups, freezer wrap." },
+      { name: "Polyester fabric", category: "Avoid", note: "Iterally plastic threads." },
+      { name: "Nylon stockings", category: "Avoid", note: "Synthetic polymer." },
+      { name: "Spandex items", category: "Avoid", note: "Stretch plastic." },
+      { name: "Rubber bands", category: "Avoid", note: "Do not break down naturally." },
+      { name: "Latex gloves", category: "Avoid", note: "Unless 100% natural and certified." },
+      { name: "Aluminum foil", category: "Avoid", note: "Metal waste." },
+      { name: "Tin cans", category: "Avoid", note: "Recycle these instead." },
+      { name: "Steel wire", category: "Avoid", note: "Rust is okay, but wire persists." },
+      { name: "Copper pipe scraps", category: "Avoid", note: "High concentrations are toxic to microbes." },
+      { name: "Glass bottles", category: "Avoid", note: "Does not decompose." },
+      { name: "Ceramic shards", category: "Avoid", note: "Inert and sharp." },
+      { name: "Rocks & Stones", category: "Avoid", note: "Physical clutter." },
+      { name: "Sand (Large amounts)", category: "Avoid", note: "Turns compost into cement-like blocks." },
+      { name: "Pesticide-treated grass", category: "Avoid", note: "Kills beneficial soil life." },
+      { name: "Herbicide-treated garden waste", category: "Avoid", note: "Persistent chemicals like Aminopyralid." },
+      { name: "Fungicides", category: "Avoid", note: "Kills the very fungi you need." },
+      { name: "Blighted Tomato plants", category: "Avoid", note: "Diseases survive in home bins." },
+      { name: "Poison Ivy", category: "Avoid", note: "Urushiol oil persists and can cause reactions from handling compost." },
+      { name: "Poison Oak", category: "Avoid", note: "Similar risk to Poison Ivy." },
+      { name: "Poison Sumac", category: "Avoid", note: "High skin irritant." },
+      { name: "Black Walnut husks", category: "Avoid", note: "Inhibits plant growth (Juglone)." },
+      { name: "Cigarette butts", category: "Avoid", note: "Plastic filters and nicotine (a pesticide)." },
+      { name: "Dryer sheets (Synthetic)", category: "Avoid", note: "Coated with chemical softeners and plastic." },
+      { name: "Vacuum lint (Synthetic carpet)", category: "Avoid", note: "Full of plastic fibers." },
+      { name: "Stickers on fruit", category: "Avoid", note: "Remove these! They are plastic." },
+      { name: "Teabags (Plastic mesh)", category: "Avoid", note: "Many modern teabags are plastic." },
+      { name: "Staples in paper", category: "Avoid", note: "Small but annoying." },
+      { name: "Plastic wrap", category: "Avoid", note: "Non-compostable." },
+      { name: "Bubble wrap", category: "Avoid", note: "Plastic waste." },
+      { name: "Styrofoam", category: "Avoid", note: "Never decomposes." },
+      { name: "Glossy labels", category: "Avoid", note: "Peel them off cardboard first." },
+      { name: "Biodegradable plastic bags", category: "Avoid", note: "Often require industrial composting heat." },
+      { name: "Invasive weed roots", category: "Avoid", note: "Bindweed, Ivy, Couch grass." },
+      { name: "Diseased rose clippings", category: "Avoid", note: "Black spot and other fungi persist." },
+      { name: "Old shoes", category: "Avoid", note: "Glue, rubber, and treated leather." },
+      { name: "Toothbrushes (Plastic)", category: "Avoid", note: "Non-organic." },
+      { name: "Razor blades", category: "Avoid", note: "Metal hazard." },
+      { name: "Electronics", category: "Avoid", note: "E-waste; contains heavy metals." },
+      { name: "Batteries", category: "Avoid", note: "Toxic leak risk." },
+      { name: "PVC pipe", category: "Avoid", note: "Toxic when broken down." },
+      { name: "Vinyl scraps", category: "Avoid", note: "Plastic." },
+      { name: "Silly string", category: "Avoid", note: "Chemical plastic." },
+      { name: "Glitter", category: "Avoid", note: "Microplastics." },
+      { name: "Confetti (Metallic)", category: "Avoid", note: "Plastic/Metal." },
+      { name: "Wrapping paper (Foil)", category: "Avoid", note: "Metal coating." },
+      { name: "Christmas tree tinsel", category: "Avoid", note: "Plastic/Metal." },
+      { name: "Old toy parts", category: "Avoid", note: "Plastic." },
+      { name: "Dental floss", category: "Avoid", note: "Usually nylon/wax combo." },
+      { name: "Q-tips (Plastic stem)", category: "Avoid", note: "Paper stem is okay; plastic is not." },
+      { name: "Cotton balls (Synthetic)", category: "Avoid", note: "Often 'cotton' balls are polyester." },
+      { name: "Dryer lint (CVS brand laundry)", category: "Avoid", note: "Caution with chemical residues." },
+      { name: "Crayons (Wax)", category: "Avoid", note: "Paraffin wax is petroleum-based." },
+      { name: "Paints & Solvents", category: "Avoid", note: "Toxic chemicals." },
+      { name: "Light bulbs", category: "Avoid", note: "Glass and toxins." },
+      { name: "Mirror shards", category: "Avoid", note: "Glass hazard." },
+      { name: "Dead animals (Large)", category: "Avoid", note: "Health hazard and major pest magnet." },
+      { name: "Moldy bread with seeds", category: "Avoid", note: "Seeds might sprout; mold is okay but seeds are risky." },
+      { name: "Magazines", category: "Avoid", note: "Heavy metals in some colored inks." },
+      { name: "Envelopes with plastic windows", category: "Avoid", note: "Cut the window out first." },
+      { name: "Gum", category: "Avoid", note: "Usually synthetic rubber/plastic base." },
+      { name: "Cough drops", category: "Avoid", note: "Sugar and chemicals." },
+      { name: "Medicine (Expired)", category: "Avoid", note: "Pollutes groundwater." },
+      { name: "Nail polish / Remover", category: "Avoid", note: "Highly toxic chemicals." },
+      { name: "Pet flea collars", category: "Avoid", note: "Designed to be pesticide-heavy." },
+      { name: "Drywall scraps", category: "Avoid", note: "Sometimes okay in tiny amounts, but often has additives." },
+      { name: "Insulation (Fiberglass)", category: "Avoid", note: "Extremely dangerous to handle." },
+      { name: "Asbestos", category: "Avoid", note: "Fatal health hazard." },
+      { name: "Motor oil", category: "Avoid", note: "Toxic lubricant." },
+      { name: "Antifreeze", category: "Avoid", note: "Toxic sweet-smelling liquid." },
+      { name: "Brake fluid", category: "Avoid", note: "Harsh chemicals." },
+      { name: "Rust converter", category: "Avoid", note: "Strong acid/complexes." },
+      { name: "Caulk / Sealant", category: "Avoid", note: "Synthetic polymers." },
+      { name: "Grout", category: "Avoid", note: "Mineral but not for compost." },
+      { name: "Plaster of Paris", category: "Avoid", note: "Hardens and blocks life." },
+      { name: "Steel wool", category: "Avoid", note: "Fine metal shreds." },
+      { name: "Teflon coated items", category: "Avoid", note: "PFAS 'forever chemicals'." },
+      { name: "Scouring pads", category: "Avoid", note: "Usually plastic abrasive." },
+      { name: "Floral foam", category: "Avoid", note: "Microplastic hazard." },
+      { name: "Plant labels (Plastic)", category: "Avoid", note: "Must be removed." },
+      { name: "Garden hose bits", category: "Avoid", note: "Rubber/Plastic." },
+      { name: "PVC glue", category: "Avoid", note: "Toxic solvent." },
+      { name: "Spray paint", category: "Avoid", note: "Aerosolized toxins." },
+      { name: "Varnish", category: "Avoid", note: "Chemical coating." },
+      { name: "Polyurethane", category: "Avoid", note: "Liquid plastic." },
+      { name: "Epoxy", category: "Avoid", note: "Resin/Hardener combo." },
+      { name: "Super glue", category: "Avoid", note: "Cyanoacrylate." },
+      { name: "Duct tape", category: "Avoid", note: "Plastic and synthetic glue." },
+      { name: "Masking tape (Synthetic)", category: "Avoid", note: "Check for paper vs plastic." },
+      { name: "Packing peanuts (Styrofoam)", category: "Avoid", note: "Only use starch-based ones." },
+      { name: "Silica gel packets", category: "Avoid", note: "Inert but persistent." },
+      { name: "Mothballs", category: "Avoid", note: "Pesticide fumes." },
+      { name: "Bleach", category: "Avoid", note: "Sterilizes the compost." },
+      { name: "Ammonia", category: "Avoid", note: "Harsh chemical." },
+      { name: "Drain cleaner", category: "Avoid", note: "Caustic chemicals." },
+      { name: "Oven cleaner", category: "Avoid", note: "Extremely alkaline." },
+      { name: "Toilet cleaner", category: "Avoid", note: "Harsh disinfectants." },
+      { name: "Glass cleaner", category: "Avoid", note: "Ammonia based." },
+      { name: "Floor wax", category: "Avoid", note: "Synthetic coatings." },
+      { name: "Car wax", category: "Avoid", note: "Petroleum products." },
+      { name: "Shoe polish", category: "Avoid", note: "Dyes and chemicals." },
+      { name: "Furniture polish", category: "Avoid", note: "Oils and silicones." },
+      { name: "Leather conditioner", category: "Avoid", note: "Animal fats/chemicals." },
+      { name: "Bug spray", category: "Avoid", note: "Pesticides." },
+      { name: "Wasp nests", category: "Avoid", note: "Unless purely paper and empty." },
+      { name: "Termite wood", category: "Avoid", note: "Health hazard to home." },
+      { name: "Carpenter ant wood", category: "Avoid", note: "Don't bring them near your house." },
+      { name: "Tick infested waste", category: "Avoid", note: "Safety hazard." },
+      { name: "Fleas", category: "Avoid", note: "Pests." },
+      { name: "Cockroaches", category: "Avoid", note: "Disease vectors." },
+      { name: "Bed bugs", category: "Avoid", note: "Burn these instead." },
+      { name: "Rat traps (Used)", category: "Avoid", note: "Biological hazard." },
+      { name: "Mouse traps (Used)", category: "Avoid", note: "Contaminated." },
+      { name: "Lead paint chips", category: "Avoid", note: "Extremely neurotoxic." },
+      { name: "Vape cartridges", category: "Avoid", note: "E-waste/Toxins." },
+      { name: "Vape juice", category: "Avoid", note: "Nicotine is toxic." },
+      { name: "Cigars", category: "Avoid", note: "Nicotine/Toxins." },
+      { name: "Chewing tobacco", category: "Avoid", note: "Chemicals." },
+      { name: "Snuff", category: "Avoid", note: "Toxins." },
+      { name: "Lighter fluid", category: "Avoid", note: "Petroleum." },
+      { name: "Matches (Unused)", category: "Avoid", note: "Chemical phosphorus." },
+      { name: "Aerosol cans", category: "Avoid", note: "Pressure hazard." },
+      { name: "Tires", category: "Avoid", note: "Rubber/Metal/Chemicals." },
+      { name: "Gasoline", category: "Avoid", note: "Toxic fuel." },
+      { name: "Diesel fuel", category: "Avoid", note: "Petroleum." },
+      { name: "Kerosene", category: "Avoid", note: "Fuel toxin." },
+      { name: "Lamp oil", category: "Avoid", note: "Chemicals." },
+      { name: "Paraffin wax", category: "Avoid", note: "Petroleum based." },
+      { name: "Beeswax (Synthetic)", category: "Avoid", note: "Check purity." },
+      { name: "Candle wicks", category: "Avoid", note: "Often have metal cores." },
+      { name: "Glitter glue", category: "Avoid", note: "Microplastic/Adhesive." },
+      { name: "White glue (Large amounts)", category: "Avoid", note: "Synthetic polymer." },
+      { name: "Hot glue", category: "Avoid", note: "Plastic." },
+      { name: "Caulk strips", category: "Avoid", note: "Rubber." },
+      { name: "Putty", category: "Avoid", note: "Chemical filler." },
+      { name: "Spackle", category: "Avoid", note: "Mineral/Polymer." },
+      { name: "Cement dust", category: "Avoid", note: "Alkaline." },
+      { name: "Grout sealer", category: "Avoid", note: "Chemical coating." },
+      { name: "Linoleum scraps", category: "Avoid", note: "Usually PVC." },
+      { name: "Vinyl flooring", category: "Avoid", note: "Plastic." },
+      { name: "Carpet padding", category: "Avoid", note: "Synthetic foam." },
+      { name: "Fiberglass insulation", category: "Avoid", note: "Glass fibers." },
+      { name: "Rockwool (Dirty)", category: "Avoid", note: "Mineral waste." },
+      { name: "Foam board", category: "Avoid", note: "Plastic." },
+      { name: "Poster board (Glossy)", category: "Avoid", note: "Chemical coating." },
+      { name: "Laminated signs", category: "Avoid", note: "Plastic." },
+      { name: "ID cards", category: "Avoid", note: "Plastic." },
+      { name: "Credit cards", category: "Avoid", note: "Micro-chipped plastic." },
+      { name: "Keys", category: "Avoid", note: "Metal." },
+      { name: "Magnets", category: "Avoid", note: "Metal/Mineral." },
+      { name: "Paper clips (Plastic coated)", category: "Avoid", note: "Plastic waste." },
+      { name: "Binder clips", category: "Avoid", note: "Metal." },
+      { name: "Push pins", category: "Avoid", note: "Plastic/Metal." },
+      { name: "Rubber bands (Synthetic)", category: "Avoid", note: "Non-compostable." },
+      { name: "Balloons", category: "Avoid", note: "Latex/Plastic hazard." },
+      { name: "Disposable cups (Plastic)", category: "Avoid", note: "Recycle only." },
+      { name: "Disposable cutlery (Plastic)", category: "Avoid", note: "Pollutes compost." },
+      { name: "Disposable plates (Plastic)", category: "Avoid", note: "Non-organic." },
+      { name: "Straws (Plastic)", category: "Avoid", note: "Plastic hazard." },
+      { name: "Stirrers (Plastic)", category: "Avoid", note: "Non-compostable." },
+      { name: "Takeout containers (Styrofoam)", category: "Avoid", note: "Toxic plastic." },
+      { name: "Takeout containers (Plastic)", category: "Avoid", note: "Recycle if possible." },
+      { name: "Cling film", category: "Avoid", note: "Plastic wrap." },
+      { name: "Zip ties", category: "Avoid", note: "Plastic straps." },
+      { name: "Garden ties (Plastic)", category: "Avoid", note: "Wire/Plastic combo." },
+      { name: "Plant pots (Plastic)", category: "Avoid", note: "Reusable or recyclable." },
+      { name: "Seed trays (Plastic)", category: "Avoid", note: "Non-biodegradable." },
+      { name: "Netting (Plastic)", category: "Avoid", note: "Bird netting hazard." },
+      { name: "Fencing (Plastic)", category: "Avoid", note: "Synthetic barrier." },
+      { name: "Tarps (Plastic)", category: "Avoid", note: "Polyester/Coating." },
+      { name: "Rope (Nylon)", category: "Avoid", note: "Synthetic fiber." },
+      { name: "Rope (Polyester)", category: "Avoid", note: "Plastic cord." },
+      { name: "Fishing line", category: "Avoid", note: "Monofilament plastic." },
+      { name: "Fishing nets", category: "Avoid", note: "Ocean plastic." },
+      { name: "Swimming pool liners", category: "Avoid", note: "Vinyl toxins." },
+      { name: "Inflatable toys", category: "Avoid", note: "PVC plastic." },
+      { name: "Beach balls", category: "Avoid", note: "Summer plastic." },
+      { name: "Sunblock bottles", category: "Avoid", note: "Plastic container." },
+      { name: "Insect repellent bottles", category: "Avoid", note: "Chemical residue." },
+      { name: "Fertilizer bags (Plastic)", category: "Avoid", note: "Chemical plastic." },
+      { name: "Pesticide bottles", category: "Avoid", note: "Toxic hazard." },
+      { name: "Herbicide bottles", category: "Avoid", note: "Poison hazard." },
+      { name: "Gas cans", category: "Avoid", note: "Fuel hazard." },
+      { name: "Oil bottles", category: "Avoid", note: "Hydrocarbon hazard." },
+      { name: "Coolant bottles", category: "Avoid", note: "Ethylene glycol hazard." },
+      { name: "Brake cleaner cans", category: "Avoid", note: "VOC hazard." },
+      { name: "Degreaser bottles", category: "Avoid", note: "Solvent hazard." },
+      { name: "Solder lead", category: "Avoid", note: "Heavy metal." },
+      { name: "Solder wire", category: "Avoid", note: "Metal waste." },
+      { name: "Welding rods", category: "Avoid", note: "Industrial waste." },
+      { name: "Flux jars", category: "Avoid", note: "Acidic chemicals." },
+      { name: "Graphite spray", category: "Avoid", note: "Lubricant toxin." },
+      { name: "Lithium grease", category: "Avoid", note: "Metal lubricant." },
+      { name: "Silicone sealant", category: "Avoid", note: "Synthetic polymer." },
+      { name: "Urethane foam", category: "Avoid", note: "Toxic plastic." },
+      { name: "Expanding foam", category: "Avoid", note: "Chemical hazard." },
+      { name: "Caulk tubes", category: "Avoid", note: "Disposable plastic." },
+      { name: "Glue sticks (Plastic)", category: "Avoid", note: "Crafting hazard." },
+      { name: "Tape dispensers", category: "Avoid", note: "Plastic desktop waste." },
+      { name: "Staplers (Plastic parts)", category: "Avoid", note: "Office waste." },
+      { name: "Hole punchers", category: "Avoid", note: "Metal/Plastic waste." },
+      { name: "Paper fasteners (Metal)", category: "Avoid", note: "Brass/Gold-tone metal." },
+      { name: "Thumb tacks", category: "Avoid", note: "Metal hazard." },
+      { name: "Push pins (Plastic)", category: "Avoid", note: "Office hazard." },
+      { name: "Animal fat trimmings", category: "Avoid", note: "Rancid stenches and pests." },
+      { name: "Antiseptic wipes", category: "Avoid", note: "Kill beneficial bacteria." },
+      { name: "Baby wipes", category: "Avoid", note: "Contain plastic fibers." },
+      { name: "BBQ briquettes (Chemical)", category: "Avoid", note: "Toxic additives." },
+      { name: "Cat litter (Crystal)", category: "Avoid", note: "Silica doesn't rot." },
+      { name: "Dryer sheets (Used)", category: "Avoid", note: "Chemical and plastic residue." },
+      { name: "Pesticide containers (Empty)", category: "Avoid", note: "Toxic residue risk." },
+      { name: "Fabric softener sheets", category: "Avoid", note: "Non-biodegradable chemicals." },
+      { name: "Fertilizer with weed killer", category: "Avoid", note: "Kills your garden plants later." },
+      { name: "Glossy flyers", category: "Avoid", note: "Plastic coating." },
+      { name: "Cat litter (Scented)", category: "Avoid", note: "Perfumes and chemicals." },
+      { name: "Milk cartons (Waxy/Plastic)", category: "Avoid", note: "Hard to break down at home." },
+      { name: "Plastic straws", category: "Avoid", note: "Forever pollutant." },
+      { name: "Polyurethane foam", category: "Avoid", note: "Chemical plastic." },
+      { name: "Rubber ducks", category: "Avoid", note: "Solid plastic." },
+      { name: "Scented candles (Paraffin)", category: "Avoid", note: "Petroleum waxy carbon." },
+      { name: "Synthetic sponges", category: "Avoid", note: "Microplastic hazard." },
+      { name: "Waxy cardboard (Liquid cartons)", category: "Avoid", note: "Usually plastic lined." },
+      { name: "Weed seeds (Mature)", category: "Avoid", note: "Will grow in your garden next year." },
+      { name: "Dog hair (Flea treated)", category: "Avoid", note: "Pesticide risk." },
+      { name: "Dryer lint (Synthetic blend)", category: "Avoid", note: "Microplastic risk." },
+    ];
+
+    // Enhance ITEMS with category chips and search tags for better discovery
+    const tagDefinitions = [
+      { id: 'vegetarian', label: 'Vegetable', color: '#166534', bg: '#dcfce7', keywords: ['lettuce', 'spinach', 'kale', 'cabbage', 'broccoli', 'cauliflower', 'brussels', 'asparagus', 'celery', 'carrot', 'parsnip', 'radish', 'turnip', 'beet', 'potato', 'onion', 'garlic', 'leek', 'squash', 'zucchini', 'cucumber', 'pumpkin', 'corn', 'pea', 'bean', 'pepper', 'tomato', 'eggplant', 'chard', 'collard', 'artichoke', 'fennel', 'shallot', 'scallion', 'endive', 'watercress', 'arugula', 'mustard greens', 'microgreens', 'vegetable', 'veg', 'veggie', 'okra', 'bok choy', 'kohlrabi', 'soybean', 'edamame', 'lentil', 'vetch', 'gourd', 'purslane', 'pigweed', 'nettle', 'alfalfa', 'comfrey', 'escarole', 'frisee', 'radicchio', 'cress', 'tofu', 'soy', 'hops'], excludes: ['taco'] },
+      { id: 'fruit', label: 'Fruit', color: '#831843', bg: '#fce7f3', keywords: ['apple', 'banana', 'orange', 'lemon', 'lime', 'fruit', 'peel', 'apple core', 'pear core', 'melon', 'berry', 'citrus', 'peach', 'plum', 'apricot', 'cherry', 'strawberry', 'raspberry', 'blueberry', 'blackberry', 'cranberry', 'grape', 'kiwi', 'mango', 'papaya', 'watermelon', 'cantaloupe', 'fig', 'date', 'pomegranate', 'persimmon', 'lychee', 'dragonfruit', 'passionfruit', 'avocado', 'honeydew'], excludes: ['lemon balm', 'cabbage'] },
+      { id: 'herb_spice', label: 'Herbs & Spices', color: '#14532d', bg: '#dcfce7', keywords: ['herb', 'basil', 'cilantro', 'parsley', 'dill', 'mint', 'sage', 'rosemary', 'thyme', 'oregano', 'marjoram', 'tarragon', 'spice', 'lemon balm'] },
+      { id: 'grain_carb', label: 'Grains & Pasta', color: '#854d0e', bg: '#fef3c7', keywords: ['pasta', 'rice', 'bread', 'oat', 'oatmeal', 'cornmeal', 'couscous', 'bulgur', 'millet', 'farro', 'barley', 'tortilla', 'bagel', 'pancake', 'pizza', 'pretzel', 'pita', 'matzo', 'cracker', 'wheatgrass', 'wheat bran', 'grain', 'flour', 'dough', 'cereal', 'popcorn', 'rye'] },
+      { id: 'nut_seed', label: 'Nuts, Seeds & Pits', color: '#78350f', bg: '#ffedd5', keywords: ['nut', 'seed', 'pit', 'shell', 'acorn', 'walnut', 'peanut', 'pistachio', 'pecan', 'almond', 'hazelnut', 'macadamia', 'coconut', 'cocoa'], excludes: ['taco'] },
+      { id: 'coffee_tea', label: 'Coffee & Tea', color: '#451a03', bg: '#ffedd5', keywords: ['coffee', 'tea'] },
+      { id: 'fungi', label: 'Fungi / Mushroom', color: '#374151', bg: '#f3f4f6', keywords: ['mushroom', 'yeast', 'agar'] },
+      { id: 'marine', label: 'Seaweed / Algae', color: '#065f46', bg: '#d1fae5', keywords: ['seaweed', 'kelp', 'algae', 'nori'] },
+      { id: 'fats_oils', label: 'Fats & Oils', color: '#854d0e', bg: '#fef08a', keywords: ['oil', 'grease', 'fat', 'lard'], excludes: ['no oil', 'raw', 'no sauce, oils'] },
+      { id: 'meat', label: 'Meat/Fish', color: '#7f1d1d', bg: '#fee2e2', keywords: ['meat', 'beef', 'pork', 'chicken', 'fish', 'lamb', 'steak', 'pork ribs', 'beef ribs', 'spare ribs', 'turkey', 'sausage', 'ham', 'deli', 'bacon', 'venison', 'poultry', 'seafood', 'shrimp', 'crab'], excludes: ['kale', 'feather', 'lamb\'s quarter'] },
+      { id: 'bone', label: 'Bones', color: '#78350f', bg: '#fef3c7', keywords: ['bone', 'bones', 'carcass'] },
+      { id: 'dairy', label: 'Dairy', color: '#1e3a8a', bg: '#dbeafe', keywords: ['milk', 'cheese', 'yogurt', 'butter', 'dairy', 'whey'], excludes: ['soy'] },
+      { id: 'egg', label: 'Eggs', color: '#854d0e', bg: '#fef08a', keywords: ['\\beggs?\\b', 'eggshell'] },
+      { id: 'paper', label: 'Paper/Cardboard', color: '#374151', bg: '#f3f4f6', keywords: ['paper', 'cardboard', 'box', 'envelope', 'magazine', 'receipt', 'napkin', 'tissue', 'tp', 'carton'] },
+      { id: 'wood', label: 'Wood & Bark', color: '#451a03', bg: '#fef08a', keywords: ['wood', 'sawdust', 'chip', 'twig', 'branch', 'briquette', 'cork', 'bamboo', 'particle board'] },
+      { id: 'soil', label: 'Soil & Compost', color: '#3f2c06', bg: '#d6c6b3', keywords: ['soil', 'peat moss', 'coir', 'bark', 'mulch', 'ash', 'coal', 'charcoal', 'dirt'] },
+      { id: 'natural_fiber', label: 'Natural Fibers', color: '#0f766e', bg: '#ccfbf1', keywords: ['cotton', 'wool', 'linen', 'silk', 'burlap', 'jute', 'hemp', 'thread', 'textile', 'loofah', 'fabric'], excludes: ['synthetic', 'plastic', 'nylon', 'poly'] },
+      { id: 'animal_product', label: 'Animal Products', color: '#78350f', bg: '#fef3c7', keywords: ['hair', 'fur', 'feather', 'nail', 'gelatin', 'leather'] },
+      { id: 'plastic', label: 'Plastic', color: '#831843', bg: '#fdf2f8', keywords: ['plastic', 'synthetic', 'poly', 'nylon', 'spandex', 'rubber', 'latex', 'styrofoam', 'pvc', 'vinyl'], excludes: ['check for', 'no plastic', 'natural fiber', 'natural only'] },
+      { id: 'metal', label: 'Metal', color: '#334155', bg: '#e2e8f0', keywords: ['metal', 'aluminum', 'foil', 'tin', 'wire', 'copper', 'steel', 'iron', 'brass'], excludes: ['remove'] },
+      { id: 'glass', label: 'Glass', color: '#0c4a6e', bg: '#e0f2fe', keywords: ['glass', 'ceramic', 'mirror', 'bulb'] },
+      { id: 'chemical', label: 'Chemical/Toxic', color: '#7f1d1d', bg: '#fee2e2', keywords: ['chemical', 'pesticide', 'herbicide', 'fungicide', 'toxic', 'paint', 'solvent', 'bleach', 'ammonia', 'cleaner', 'wax', 'waxy', 'polish', 'poison', 'motor oil', 'antifreeze', 'brake fluid', 'aerosol', 'kerosene', 'fuel', 'diesel', 'lighter fluid', 'dryer lint', 'wipe', 'medicine', 'drug', 'cigar', 'snuff', 'tobacco', 'vape', 'nicotine', 'antiseptic', 'disinfectant', 'paraffin'] },
+      { id: 'garden_waste', label: 'Garden Waste', color: '#14532d', bg: '#ecfccb', keywords: ['grass', 'weed', 'leaf', 'leaves', 'pine', 'straw', 'hay', 'plant', 'flower', 'bouquet', 'clipping', 'garden', 'clover', 'lemon balm', 'nettle'], excludes: ['plant protein', 'plastic', 'synthetic'] },
+      { id: 'animal_waste', label: 'Animal/Human Waste', color: '#451a03', bg: '#fef3c7', keywords: ['poop', 'pet waste', 'human waste', 'animal waste', 'litter', 'feces', 'manure', 'urine'] },
+      { id: 'building_material', label: 'Building Materials', color: '#4b5563', bg: '#e5e7eb', keywords: ['drywall', 'insulation', 'asbestos', 'grout', 'plaster', 'spackle', 'cement', 'epoxy', 'super glue', 'caulk', 'putty', 'floral foam', 'rust converter'], excludes: ['remove'] },
+      { id: 'pest', label: 'Pests / Bugs', color: '#581c87', bg: '#f3e8ff', keywords: ['bug', 'insect', 'flea', 'roach', 'cockroach', 'termite', 'rat', 'mouse', 'tick', 'wasp'], excludes: ['untreated'] },
+      { id: 'misc', label: 'Miscellaneous', color: '#1f2937', bg: '#e5e7eb', keywords: ['beer', 'wine', 'alcohol', 'jello', 'vacuum bag', 'rock', 'stone', 'sand', 'dust', 'glitter', 'silica', 'graphite', 'candle', 'matches', 'taco shell', 'soy', 'hops'] }
+    ];
+
+    ITEMS.forEach(item => {
+      let searchTags = "";
+      let categoryChips = [];
+      const name = (item.name || "").toLowerCase();
+      const note = (item.note || "").toLowerCase();
+      const combined = name + " " + note;
+      
+      tagDefinitions.forEach(tagDef => {
+        let matched = tagDef.keywords.some(kw => {
+          const regex = new RegExp(kw.includes('\\b') ? kw : '\\b' + kw + 'e?s?\\b', 'i');
+          return regex.test(name) || regex.test(note);
+        });
+
+        if (matched && tagDef.excludes) {
+          if (tagDef.excludes.some(ex => combined.includes(ex.toLowerCase()))) {
+            matched = false;
+          }
+        }
+
+        if (matched) {
+          searchTags += " " + tagDef.keywords.join(' ');
+          categoryChips.push(tagDef);
+        }
+      });
+
+      // Avoid duplicate chips and handle special fallbacks
+      if (categoryChips.length === 0) {
+          if (name.includes("cork")) categoryChips.push(tagDefinitions.find(t => t.id === 'wood'));
+          else if (name.includes("animal")) categoryChips.push(tagDefinitions.find(t => t.id === 'meat')); 
+          else if (name.includes("gas") || name.includes("oil") || name.includes("coolant")) categoryChips.push(tagDefinitions.find(t => t.id === 'chemical'));
+          else if (name.includes("liquid")) categoryChips.push(tagDefinitions.find(t => t.id === 'vegetarian'));
+          else categoryChips.push(tagDefinitions.find(t => t.id === 'misc'));
+      }
+
+      item.searchTags = searchTags;
+      
+      // Deduplicate
+      const uniqueChips = [];
+      const chipIds = new Set();
+      categoryChips.forEach(c => {
+         if (c && !chipIds.has(c.id)) {
+            uniqueChips.push(c);
+            chipIds.add(c.id);
+         }
+      });
+      
+      // Cross-category exclusion for plastic vs natural fibers/garden waste
+      if (chipIds.has('plastic')) {
+        item.categoryChips = uniqueChips.filter(c => c.id !== 'garden_waste' && c.id !== 'natural_fiber');
+      } else {
+        item.categoryChips = uniqueChips;
+      }
+    });
+
+    // Initialize Fuse.js for fuzzy search
+    const fuse = new Fuse(ITEMS, {
+      keys: [
+        { name: 'name', weight: 2 },
+        { name: 'note', weight: 1 },
+        { name: 'searchTags', weight: 1.5 }
+      ],
+      threshold: 0.35,
+      location: 0,
+      distance: 100,
+      minMatchCharLength: 2,
+      ignoreLocation: true
+    });
+
+    // DOM Elements
+    const searchInput = document.getElementById('searchInput');
+    const itemContainer = document.getElementById('itemContainer');
+
+    // State
+    let currentSearch = '';
+    let currentFilter = 'All';
+    let currentStatus = 'all';
+
+    // Helper to escape HTML and prevent XSS
+    function escapeHTML(str) {
+      if (str === null || str === undefined) return '';
+      const p = document.createElement('p');
+      p.textContent = str;
+      return p.innerHTML;
+    }
+
+    function getCategoryReason(item) {
+        const name = (item.name || '').toLowerCase();
+        if (item.category === 'Green') {
+            if (name.includes('manure')) return '<strong>Why Green?</strong> Manure is extremely rich in nitrogen and acts as an activator to heat up the compost pile.';
+            if (name.includes('coffee') || name.includes('tea')) return '<strong>Why Green?</strong> Despite their brown color, coffee grounds and tea leaves are rich in nitrogen and protein.';
+            if (name.includes('fruit') || name.includes('peel') || name.includes('core')) return '<strong>Why Green?</strong> Fruit scraps are wet and high in nitrogen, providing quick energy for microbes.';
+            if (name.includes('vegetable') || name.includes('scrap')) return '<strong>Why Green?</strong> Vegetable scraps add essential moisture and nitrogen to the compost ecosystem.';
+            if (name.includes('grass') || name.includes('weed') || name.includes('clover')) return '<strong>Why Green?</strong> Freshly cut grass and green plants are packed with moisture and nitrogen.';
+            return '<strong>Why Green?</strong> It is high in nitrogen and provides the moisture and nutrients microbes need to thrive.';
+        }
+        if (item.category === 'Brown') {
+            if (name.includes('paper') || name.includes('cardboard') || name.includes('box')) return '<strong>Why Brown?</strong> Paper and cardboard are almost entirely carbon, providing structural support and energy.';
+            if (name.includes('wood') || name.includes('sawdust') || name.includes('chip') || name.includes('twig')) return '<strong>Why Brown?</strong> Wood materials are dense sources of carbon that break down slowly and provide aeration.';
+            if (name.includes('leaf') || name.includes('leaves') || name.includes('pine')) return '<strong>Why Brown?</strong> Dry leaves are a classic carbon source that adds bulk and helps balance wet "Greens".';
+            if (name.includes('shell') || name.includes('pit') || name.includes('nut')) return '<strong>Why Brown?</strong> Hard shells are high in carbon and take a very long time to decompose, adding structure.';
+            if (name.includes('cotton') || name.includes('wool') || name.includes('fabric')) return '<strong>Why Brown?</strong> Natural plant and animal fibers act as slow-decomposing carbon sources.';
+            if (name.includes('straw') || name.includes('hay')) return '<strong>Why Brown?</strong> Dried plant stalks like straw are high in carbon and create excellent air pockets in the pile.';
+            return '<strong>Why Brown?</strong> It is high in carbon and provides structural bulk and energy for compost microbes.';
+        }
+        if (item.category === 'Avoid') {
+            if (name.includes('plastic') || name.includes('synthetic') || name.includes('poly')) return '<strong>Why Avoid?</strong> Synthetic materials will never decompose and will contaminate the finished compost.';
+            if (name.includes('meat') || name.includes('fat') || name.includes('dairy') || name.includes('bone') || name.includes('cheese')) return '<strong>Why Avoid?</strong> Animal products rot and putrefy, spreading strong odors that attract rodents and pests.';
+            if (name.includes('poop') || name.includes('waste') || name.includes('litter') || name.includes('feces')) return '<strong>Why Avoid?</strong> Carnivore pet and human waste carry dangerous pathogens that can survive home composting.';
+            if (name.includes('disease') || name.includes('blight') || name.includes('weed seed')) return '<strong>Why Avoid?</strong> Home composts rarely get hot enough to destroy diseases or persistent seeds, which can spread to your garden.';
+            if (name.includes('chemical') || name.includes('treated') || name.includes('glossy') || name.includes('paint')) return '<strong>Why Avoid?</strong> Toxic chemicals can kill the beneficial microbes driving the composting process.';
+            if (name.includes('glass') || name.includes('metal') || name.includes('foil')) return '<strong>Why Avoid?</strong> Inorganic materials will not break down and pose a physical hazard in your garden soil.';
+            return '<strong>Why Avoid?</strong> It can harm the composting ecosystem, attract pests, or never break down.';
+        }
+        return '';
+    }
+
+    // Helper to generate dynamic composting tips based on item
+    function getCompostTip(item) {
+        const name = (item.name || '').toLowerCase();
+        const note = (item.note || '').toLowerCase();
+        
+        if (item.category === 'Avoid') {
+             if (name.includes('plastic') || name.includes('poly') || name.includes('synthetic') || note.includes('plastic')) {
+                 return '<strong>Warning:</strong> Plastics and synthetic materials will never break down in a home compost and contaminate soil.';
+             }
+             if (name.includes('meat') || name.includes('bone') || name.includes('fat') || name.includes('dairy') || name.includes('cheese') || name.includes('milk') || name.includes('butter') || name.includes('oil') || note.includes('pest')) {
+                 return '<strong>Warning:</strong> Animal products and fats putrefy quickly, produce foul odors, and are strong attractants for rats and other pests.';
+             }
+             if (name.includes('poop') || name.includes('waste') || name.includes('litter') || name.includes('diaper') || name.includes('feces')) {
+                 return '<strong>Warning:</strong> Pet and human waste can carry harmful pathogens and parasites that survive standard compost temperatures.';
+             }
+             if (name.includes('chemical') || name.includes('treated') || name.includes('glossy') || name.includes('toxic') || name.includes('cleaner') || name.includes('solvent') || note.includes('chemical')) {
+                 return '<strong>Warning:</strong> Chemical residues can kill the beneficial bacteria and microbes essential for the composting process.';
+             }
+             if (name.includes('weed') || name.includes('disease') || name.includes('blight')) {
+                 return '<strong>Warning:</strong> Standard home composting rarely gets hot enough to kill weed seeds or plant pathogens, risking spreading them to your garden.';
+             }
+             return '<strong>Warning:</strong> This item is detrimental to the composting process. Keep it out of your bin to maintain a healthy pile.';
+        }
+        
+        if (item.category === 'Green') {
+             if (name.includes('coffee') || name.includes('tea')) {
+                 return '<strong>Composting Tip:</strong> Coffee grounds and tea are excellent nitrogen sources. Filters and natural bags can be composted along with them.';
+             }
+             if (name.includes('manure')) {
+                 return '<strong>Composting Tip:</strong> Herbivore manure is fantastic for heating up a pile quickly. Layer it with plenty of dry browns.';
+             }
+             if (name.includes('citrus') || name.includes('lemon') || name.includes('orange') || name.includes('grapefruit')) {
+                 return '<strong>Composting Tip:</strong> Citrus peels take longer to break down and can be acidic. Chop them up and use in moderation to avoid upsetting worms.';
+             }
+             if (name.includes('grass') || name.includes('clover') || name.includes('weed')) {
+                 return '<strong>Composting Tip:</strong> Fresh grass clippings mat together and smell bad if clumped. Spread them thinly or mix aggressively with dry leaves or cardboard.';
+             }
+             if (name.includes('fruit') || name.includes('peel') || name.includes('core') || name.includes('melon') || name.includes('apple') || name.includes('banana')) {
+                 return '<strong>Composting Tip:</strong> Sweet fruit scraps attract fruit flies. Bury them deep in the pile or cover them with a layer of browns immediately.';
+             }
+             if (name.includes('vegetable') || name.includes('scrap') || name.includes('green') || name.includes('lettuce')) {
+                 return '<strong>Composting Tip:</strong> Kitchen veggie scraps are high in moisture. Balance their wetness with dry browns to prevent a soggy, anaerobic pile.';
+             }
+             return '<strong>Composting Tip:</strong> Green materials provide the nitrogen and moisture microbes need to multiply. Always balance with roughly 2-3 parts brown materials.';
+        }
+        
+        if (item.category === 'Brown') {
+             if (name.includes('cardboard') || name.includes('paper') || name.includes('newspaper') || name.includes('box')) {
+                 return '<strong>Composting Tip:</strong> Always shred or tear paper and cardboard into small pieces. Flat sheets can form a papier-mâché mat that blocks airflow and water.';
+             }
+             if (name.includes('leaf') || name.includes('leaves') || name.includes('pine')) {
+                 return '<strong>Composting Tip:</strong> Dry leaves are the perfect carbon source. Stockpile them in fall to use year-round. Crushing them first speeds up decomposition.';
+             }
+             if (name.includes('wood') || name.includes('sawdust') || name.includes('chip') || name.includes('bark') || name.includes('twig') || name.includes('branch')) {
+                 return '<strong>Composting Tip:</strong> Wood products break down very slowly. Use small chips or fine sawdust, and mix well to avoid nitrogen tie-up.';
+             }
+             if (name.includes('shell') || name.includes('pit') || name.includes('nut') || name.includes('seed')) {
+                 return '<strong>Composting Tip:</strong> Hard shells and pits decompose extremely slowly. Crush them with a hammer first, or expect to sift them out of finished compost.';
+             }
+             if (name.includes('fabric') || name.includes('cotton') || name.includes('wool') || name.includes('hair') || name.includes('fur')) {
+                 return '<strong>Composting Tip:</strong> Natural fibers will break down, but slowly. Cut fabrics into small strips and bury hair/fur deep so it doesn\'t blow away.';
+             }
+             if (name.includes('straw') || name.includes('hay')) {
+                 return '<strong>Composting Tip:</strong> Straw provides excellent structure and aeration to a pile. Ensure it hasn\'t been treated with persistent herbicides.';
+             }
+             return '<strong>Composting Tip:</strong> Brown materials add essential carbon and structural bulk, allowing oxygen to flow through the pile for aerobic decomposition.';
+        }
+        
+        return '';
+    }
+
+    // Render Function
+    function renderItems() {
+      // 1. Filter and Search the data
+      const query = currentSearch.trim();
+      let filtered = [];
+
+      if (!query) {
+        filtered = ITEMS.filter(item => {
+          // Category match
+          const catMatch = currentFilter === 'All' || item.category === currentFilter;
+          if (!catMatch) return false;
+          
+          // Status match
+          if (currentStatus === 'compostable') return item.category === 'Green' || item.category === 'Brown';
+          if (currentStatus === 'non-compostable') return item.category === 'Avoid';
+          
+          return true;
+        });
+      } else {
+        const results = fuse.search(query);
+        filtered = results
+          .map(result => result.item)
+          .filter(item => {
+            // Category match
+            const catMatch = currentFilter === 'All' || item.category === currentFilter;
+            if (!catMatch) return false;
+            
+            // Status match
+            if (currentStatus === 'compostable') return item.category === 'Green' || item.category === 'Brown';
+            if (currentStatus === 'non-compostable') return item.category === 'Avoid';
+            
+            return true;
+          });
+      }
+
+      // Update screen reader status
+      const searchStatus = document.getElementById('search-status');
+      if (searchStatus) {
+        searchStatus.textContent = `${filtered.length} items found.`;
+      }
+
+      // 3. Build HTML
+      itemContainer.innerHTML = '';
+
+      if (filtered.length === 0) {
+        itemContainer.innerHTML = `
+          <div class="no-results">
+            <p>No items found matching "${escapeHTML(query)}". Try a different search term.</p>
+          </div>
+        `;
+        return;
+      }
+
+      function renderItemCard(item) {
+        // Find actual index in global ITEMS array
+        const itemIdx = ITEMS.indexOf(item);
+        return `
+          <article class="item-card" data-category="${item.category}" onclick="toggleCard(this)" tabindex="0" role="button" aria-expanded="false" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCard(this);}">
+            <div class="item-header">
+              <h3 class="item-title">${escapeHTML(item.name)}</h3>
+              <div class="item-header-bottom">
+                ${item.categoryChips && item.categoryChips.length > 0 ? `
+                  <div class="item-chips">
+                    ${item.categoryChips.map(chip => `<span class="category-chip" style="background-color: ${chip.bg}; color: ${chip.color}; border-color: ${chip.color}33;">${escapeHTML(chip.label)}</span>`).join('')}
+                  </div>
+                ` : '<div></div>'}
+                <div class="item-badge-wrap">
+                  <span class="item-badge" aria-label="Category: ${item.category}">${item.category}</span>
+                  <svg class="expand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </div>
+            </div>
+            <div class="item-details">
+              <div class="item-details-inner">
+                <p class="item-note"><strong>Note:</strong> ${escapeHTML(item.note)}</p>
+                <p class="item-reason">${getCategoryReason(item)}</p>
+                ${getCompostTip(item) ? `<div class="item-tip">${getCompostTip(item)}</div>` : ''}
+                <a href="https://www.ecosia.org/search?q=composting+${encodeURIComponent((item.name || '').toLowerCase())}" target="_blank" rel="noopener noreferrer" class="learn-more-link" onclick="event.stopPropagation();">
+                  Learn more
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      if (query.length > 0) {
+        // If there's a search term, render a flat list to prioritize relevance
+        const resultsDiv = document.createElement('div');
+        resultsDiv.innerHTML = `
+          <div class="grid-container">
+            ${filtered.map(renderItemCard).join('')}
+          </div>
+        `;
+        itemContainer.appendChild(resultsDiv);
+        return;
+      }
+
+      // 2. Group by Category (for non-search view)
+      const categories = ['Green', 'Brown', 'Avoid'];
+      const grouped = categories.reduce((acc, cat) => {
+        acc[cat] = filtered.filter(item => item.category === cat);
+        return acc;
+      }, {});
+
+      const CATEGORY_NAMES = {
+        'Green': 'Greens (Nitrogen)',
+        'Brown': 'Browns (Carbon)',
+        'Avoid': 'Avoid (Do not compost)'
+      };
+
+      const CATEGORY_ICONS = {
+        'Green': '🌿',
+        'Brown': '🍂',
+        'Avoid': '🚫'
+      };
+
+      const hasAnyOpen = categories.some(cat => currentFilter === cat);
+      if (itemContainer) {
+        if (hasAnyOpen) {
+          itemContainer.classList.add('has-open');
+        } else {
+          itemContainer.classList.remove('has-open');
+        }
+      }
+
+      categories.forEach(cat => {
+        const catItems = grouped[cat];
+        if (catItems.length === 0) return;
+
+        // Auto-open only if specifically filtered to this category
+        const isOpen = currentFilter === cat;
+
+        const groupDiv = document.createElement('div');
+        groupDiv.className = `accordion-group ${isOpen ? 'open' : ''}`;
+        groupDiv.id = `group-${cat}`;
+        
+        groupDiv.innerHTML = `
+          <button class="accordion-header" onclick="toggleAccordion('${cat}')" aria-expanded="${isOpen}">
+            <h2>
+              <span>${CATEGORY_ICONS[cat]}</span>
+              ${CATEGORY_NAMES[cat]}
+              <span class="category-count">${catItems.length}</span>
+            </h2>
+            <div class="accordion-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              <div class="grid-container">
+                ${catItems.map(renderItemCard).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+        itemContainer.appendChild(groupDiv);
+      });
+    }
+
+    function toggleAccordion(category) {
+      const group = document.getElementById(`group-${category}`);
+      if (!group) return;
+      
+      const isOpening = !group.classList.contains('open');
+      const query = currentSearch.trim();
+
+      // If opening and not searching, close others (exclusive accordion behavior)
+      if (isOpening && query.length === 0) {
+        document.querySelectorAll('.accordion-group').forEach(other => {
+          if (other !== group && other.classList.contains('open')) {
+            other.classList.remove('open');
+            const otherBtn = other.querySelector('.accordion-header');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      group.classList.toggle('open');
+      
+      // Update cheat-sheet padding to allow scrolling last section to top only when something is open
+      const cheatSheet = document.getElementById('itemContainer');
+      const hasAnyOpen = document.querySelector('.accordion-group.open') !== null;
+      if (cheatSheet) {
+        if (hasAnyOpen) {
+          cheatSheet.classList.add('has-open');
+        } else {
+          cheatSheet.classList.remove('has-open');
+        }
+      }
+
+      const btn = group.querySelector('.accordion-header');
+      const isOpen = group.classList.contains('open');
+      if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+      const isReduceMotion = document.body.classList.contains('reduce-motion');
+      const baseBehavior = isReduceMotion ? 'auto' : 'smooth';
+
+      // Crucial: scroll to the group header so it stays pinned near the top
+      // especially when sections above it are collapsing or when closing while sticky.
+      // Sticky headers combined with scrolling provides the smoothest transition.
+      const performScroll = (behavior = baseBehavior) => {
+        group.scrollIntoView({ behavior: behavior, block: 'start' });
+      };
+
+      // Immediate call to start the movement
+      performScroll(baseBehavior);
+
+      if (!isReduceMotion) {
+        // Multiple follow-ups to catch layout stabilization as sections collapse/expand
+        setTimeout(() => performScroll('smooth'), 100);
+        setTimeout(() => performScroll('smooth'), 250);
+        // Final precision anchor with auto behavior
+        setTimeout(() => performScroll('auto'), 400);
+      } else {
+        // Instant anchor for reduced motion
+        setTimeout(() => performScroll('auto'), 50);
+      }
+    }
+
+    window.toggleCard = function(cardElement) {
+      const isExpanded = cardElement.classList.contains('expanded');
+      
+      // Close other expanded cards
+      document.querySelectorAll('.item-card.expanded').forEach(card => {
+        if (card !== cardElement) {
+          card.classList.remove('expanded');
+          card.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      cardElement.classList.toggle('expanded');
+      cardElement.setAttribute('aria-expanded', !isExpanded);
+    };
+
+    // --- Calculator Logic ---
+    const greenInput = document.getElementById('greenInput');
+    const brownInput = document.getElementById('brownInput');
+    const greenVal = document.getElementById('greenVal');
+    const brownVal = document.getElementById('brownVal');
+    const statusBadge = document.getElementById('statusBadge');
+    const statusDesc = document.getElementById('statusDesc');
+    const ratioText = document.getElementById('ratioText');
+    const indicatorFill = document.getElementById('indicatorFill');
+    const moodIndicator = document.getElementById('moodIndicator');
+    const recommendations = document.getElementById('recommendations');
+
+    let currentRecIndex = 0;
+    let currentStatusKey = null;
+
+    const RECOMMENDATION_DATA = {
+      danger: [
+        {
+          advice: "Your pile is Nitrogen heavy. It might start to smell and become soggy.",
+          items: ["Dry leaves", "Shredded cardboard", "Wood chips", "Straw"]
+        },
+        {
+          advice: "Excess moisture can lead to anaerobic conditions. Mix in some dry shredded newspaper.",
+          items: ["Shredded paper", "Dry stalks", "Sawdust"]
+        },
+        {
+          advice: "If it smells like ammonia, you have too many Greens. Bulk up the Carbon (Browns) immediately.",
+          items: ["Egg cartons", "Dried mulch", "Cardboard"]
+        }
+      ],
+      warning: [
+        {
+          advice: "Your pile is Carbon heavy. Decomposition will be extremely slow.",
+          items: ["Fruit scraps", "Grass clippings", "Coffee grounds", "Vegetable peels"]
+        },
+        {
+          advice: "A dry pile won't heat up. Add moisture and fresh nitrogen-rich materials to jumpstart the microbes.",
+          items: ["Liquid seaweed", "Pantry scrapings", "Kitchen waste"]
+        },
+        {
+          advice: "Nitrogen is the fuel for composting. If your pile is cold and brown, feed it more green food waste.",
+          items: ["Old fruit", "Corn cobs (crushed)", "Rotting veggies"]
+        }
+      ],
+      perfect: [
+        {
+          advice: "The balance is excellent! The microbes in your bin have exactly what they need.",
+          items: []
+        },
+        {
+          advice: "Ensure you keep it damp like a wrung-out sponge for optimal decomposition speed.",
+          items: []
+        },
+        {
+          advice: "Remember to turn the pile occasionally to add oxygen for aerobic breakdown.",
+          items: []
+        },
+        {
+          advice: "Adding a handful of finished compost or healthy garden soil can 'innoculate' your pile with beneficial microbes.",
+          items: []
+        }
+      ]
+    };
+
+    function adjustValue(id, delta) {
+      const input = document.getElementById(id);
+      const newVal = parseInt(input.value) + delta;
+      if (newVal >= parseInt(input.min) && newVal <= parseInt(input.max)) {
+        input.value = newVal;
+        updateCalculator();
+      }
+    }
+
+    function updateCalculator() {
+      let g = parseInt(greenInput.value);
+      let b = parseInt(brownInput.value);
+      
+      greenVal.textContent = g;
+      brownVal.textContent = b;
+
+      const total = g + b;
+      if (total === 0) {
+        statusBadge.textContent = "Empty Bin";
+        statusBadge.className = "status-badge";
+        statusDesc.textContent = "Adjust the sliders to analyze your compost mix.";
+        indicatorFill.style.width = "0%";
+        indicatorFill.className = "indicator-fill";
+        moodIndicator.textContent = "🕳️";
+        moodIndicator.style.borderColor = "var(--color-border)";
+        ratioText.textContent = "0% / 0%";
+        recommendations.classList.remove('visible');
+        currentStatusKey = null;
+        return;
+      }
+
+      const greenPercent = Math.round((g / total) * 100);
+      const brownPercent = 100 - greenPercent;
+      
+      indicatorFill.style.width = greenPercent + "%";
+      ratioText.textContent = `${greenPercent}% / ${brownPercent}%`;
+
+      let newStatusKey = "perfect";
+
+      // Logic: Ideal range is roughly 30-50% Greens
+      if (greenPercent > 55) {
+        statusBadge.textContent = "Too Slimy";
+        statusBadge.className = "status-badge status-danger";
+        statusDesc.textContent = "Your pile is Nitrogen heavy. It might start to smell and become soggy.";
+        indicatorFill.className = "indicator-fill status-danger";
+        moodIndicator.textContent = "🤢";
+        moodIndicator.style.borderColor = "var(--color-avoid-text)";
+        newStatusKey = "danger";
+      } else if (greenPercent < 20) {
+        statusBadge.textContent = "Too Dry";
+        statusBadge.className = "status-badge status-warning";
+        statusDesc.textContent = "Your pile is Carbon heavy. Decomposition will be extremely slow.";
+        indicatorFill.className = "indicator-fill status-warning";
+        moodIndicator.textContent = "🏜️";
+        moodIndicator.style.borderColor = "var(--color-brown-text)";
+        newStatusKey = "warning";
+      } else {
+        statusBadge.textContent = "Pure Gold";
+        statusBadge.className = "status-badge status-perfect";
+        statusDesc.textContent = "The balance is excellent! The microbes in your bin have exactly what they need.";
+        indicatorFill.className = "indicator-fill status-perfect";
+        moodIndicator.textContent = "🌿";
+        moodIndicator.style.borderColor = "var(--color-green-text)";
+        newStatusKey = "perfect";
+      }
+
+      if (newStatusKey !== currentStatusKey) {
+        currentStatusKey = newStatusKey;
+        currentRecIndex = 0;
+        renderRecommendation();
+      }
+    }
+
+    window.cycleRecommendation = function() {
+      if (!currentStatusKey) return;
+      const recs = RECOMMENDATION_DATA[currentStatusKey];
+      currentRecIndex = (currentRecIndex + 1) % recs.length;
+      renderRecommendation();
+    };
+
+    function renderRecommendation() {
+      if (!currentStatusKey) return;
+      
+      const recs = RECOMMENDATION_DATA[currentStatusKey];
+      const rec = recs[currentRecIndex];
+      
+      recommendations.classList.add('visible');
+      recommendations.innerHTML = `
+        <h4>Expert Recommendation</h4>
+        <p>${rec.advice}</p>
+        ${rec.items.length > 0 ? `
+          <div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.4rem;">
+            ${rec.items.map(item => `<span class="category-chip" style="background: rgba(255,255,255,0.05); color: var(--color-text); border: 1px solid var(--color-border);">${item}</span>`).join('')}
+          </div>
+        ` : ''}
+        <div class="rec-footer">
+          <span class="rec-counter">${currentRecIndex + 1} of ${recs.length}</span>
+          <button class="cycle-btn" onclick="cycleRecommendation()">
+            Next Tip 
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      `;
+    }
+
+    greenInput.addEventListener('input', updateCalculator);
+    brownInput.addEventListener('input', updateCalculator);
+    // Initialize calculator
+    updateCalculator();
+
+    // --- Settings Persistence & Logic ---
+    const settingsBtn = document.getElementById('settingsBtn');
+    const closeSettings = document.getElementById('closeSettings');
+    const settingsOverlay = document.getElementById('settingsOverlay');
+    const themeToggle = document.getElementById('themeToggle');
+    const dyslexiaToggle = document.getElementById('dyslexiaToggle');
+    const motionToggle = document.getElementById('motionToggle');
+    const clearSearchBtn = document.getElementById('clearSearch');
+    const statusRadios = document.querySelectorAll('input[name="status"]');
+
+    function loadSettings() {
+      const savedTheme = localStorage.getItem('gm-theme') || 'dark';
+      const savedDyslexia = localStorage.getItem('gm-dyslexia') === 'true';
+      const savedMotion = localStorage.getItem('gm-motion') === 'true';
+
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      themeToggle.checked = savedTheme === 'dark';
+
+      if (savedDyslexia) {
+        document.body.classList.add('dyslexia-font');
+        dyslexiaToggle.checked = true;
+      }
+
+      if (savedMotion) {
+        document.body.classList.add('reduce-motion');
+        document.documentElement.classList.add('reduce-motion');
+        motionToggle.checked = true;
+      }
+    }
+
+    settingsBtn.addEventListener('click', () => {
+      settingsOverlay.classList.add('open');
+    });
+
+    closeSettings.addEventListener('click', () => {
+      settingsOverlay.classList.remove('open');
+    });
+
+    settingsOverlay.addEventListener('click', (e) => {
+      if (e.target === settingsOverlay) {
+        settingsOverlay.classList.remove('open');
+      }
+    });
+
+    themeToggle.addEventListener('change', () => {
+      const isDark = themeToggle.checked;
+      const theme = isDark ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('gm-theme', theme);
+    });
+
+    dyslexiaToggle.addEventListener('change', () => {
+      const isEnabled = dyslexiaToggle.checked;
+      if (isEnabled) {
+        document.body.classList.add('dyslexia-font');
+      } else {
+        document.body.classList.remove('dyslexia-font');
+      }
+      localStorage.setItem('gm-dyslexia', isEnabled);
+    });
+
+    motionToggle.addEventListener('change', () => {
+      const isEnabled = motionToggle.checked;
+      if (isEnabled) {
+        document.body.classList.add('reduce-motion');
+        document.documentElement.classList.add('reduce-motion');
+      } else {
+        document.body.classList.remove('reduce-motion');
+        document.documentElement.classList.remove('reduce-motion');
+      }
+      localStorage.setItem('gm-motion', isEnabled);
+    });
+
+    // Initialize Settings
+    loadSettings();
+
+    // Event Listeners
+    searchInput.addEventListener('input', (e) => {
+      currentSearch = e.target.value;
+      if (currentSearch.length > 0) {
+        clearSearchBtn.classList.add('visible');
+      } else {
+        clearSearchBtn.classList.remove('visible');
+      }
+      renderItems();
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      // 1. Reset state
+      currentSearch = '';
+      currentFilter = 'All';
+      currentStatus = 'all';
+      searchInput.value = '';
+      clearSearchBtn.classList.remove('visible');
+
+      // 3. Update status radios
+      statusRadios.forEach(radio => {
+        radio.checked = radio.value === 'all';
+      });
+
+      // 4. Re-render
+      renderItems();
+      searchInput.focus();
+    });
+
+    statusRadios.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        currentStatus = e.target.value;
+        renderItems();
+      });
+    });
+
+    // Initial render
+    renderItems();
+  </script>
+</body>
+</html>
