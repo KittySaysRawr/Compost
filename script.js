@@ -7,20 +7,34 @@ const loaderMessages = [
   "Preparing your bin..."
 ];
 let messageIndex = 0;
-const loaderInterval = setInterval(() => {
-  messageIndex = (messageIndex + 1) % loaderMessages.length;
-  const loadingText = document.getElementById('loadingText');
-  if (loadingText) loadingText.textContent = loaderMessages[messageIndex];
-}, 800);
 
-// CSS animation now handles hiding the loader safely
+const changeMessage = () => {
+  const loadingText = document.getElementById('loadingText');
+  if (!loadingText) return;
+  
+  // Smoothly fade out the text
+  loadingText.style.transition = 'opacity 0.25s ease-in-out';
+  loadingText.style.opacity = '0';
+  
+  // Wait for fade out, change content, and fade in
+  setTimeout(() => {
+    messageIndex = (messageIndex + 1) % loaderMessages.length;
+    loadingText.textContent = loaderMessages[messageIndex];
+    loadingText.style.opacity = '1';
+  }, 250);
+};
+
+// Cycle messages with a smooth transition
+const loaderInterval = setInterval(changeMessage, 1100);
+
+// CSS animation handles hiding the loader, JS acts as a failsafe to clean up the DOM
 setTimeout(() => {
   clearInterval(loaderInterval);
   const loadingOverlay = document.getElementById('loadingOverlay');
   if (loadingOverlay && loadingOverlay.parentNode) {
     loadingOverlay.parentNode.removeChild(loadingOverlay);
   }
-}, 3000);
+}, 4200);
 
     const ITEMS = [
       // === GREENS (Nitrogen-Rich) ===
