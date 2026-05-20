@@ -13,26 +13,14 @@ const loaderInterval = setInterval(() => {
   if (loadingText) loadingText.textContent = loaderMessages[messageIndex];
 }, 800);
 
-const hideLoadingScreen = () => {
-  setTimeout(() => {
-    clearInterval(loaderInterval);
-    const loadingOverlay = document.getElementById('loadingOverlay');
-    if (loadingOverlay) {
-      loadingOverlay.classList.add('hidden');
-      setTimeout(() => {
-        if (loadingOverlay.parentNode) {
-          loadingOverlay.parentNode.removeChild(loadingOverlay);
-        }
-      }, 500);
-    }
-  }, 2400);
-};
-
-if (document.readyState === 'complete') {
-  hideLoadingScreen();
-} else {
-  window.addEventListener('load', hideLoadingScreen);
-}
+// CSS animation now handles hiding the loader safely
+setTimeout(() => {
+  clearInterval(loaderInterval);
+  const loadingOverlay = document.getElementById('loadingOverlay');
+  if (loadingOverlay && loadingOverlay.parentNode) {
+    loadingOverlay.parentNode.removeChild(loadingOverlay);
+  }
+}, 3000);
 
     const ITEMS = [
       // === GREENS (Nitrogen-Rich) ===
