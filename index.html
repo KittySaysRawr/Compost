@@ -153,6 +153,7 @@
     </style>
   </head>
   <body id="top">
+    <!-- Loading Overlay: Covers the screen while initial data/scripts load -->
     <div
       id="loadingOverlay"
       class="loading-overlay"
@@ -178,7 +179,11 @@
         </p>
       </div>
     </div>
+
+    <!-- Accessibility: Skip Link for screen readers/keyboard users -->
     <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- Global Navigation Banner -->
     <nav class="top-banner" aria-label="Global Banner">
       <div class="container banner-inner">
         <div class="logo-wrapper">
@@ -243,6 +248,8 @@
         </div>
       </div>
     </nav>
+
+    <!-- Header Section: Title and basic instructions -->
     <header>
       <h1>Can I Compost This?</h1>
       <p class="subtitle">A quick cheat sheet for everyday compost decisions</p>
@@ -252,6 +259,8 @@
         <span class="avoid">Avoid</span> items out of your bin.
       </p>
     </header>
+
+    <!-- Settings Modal Overlay: Contains options for accessibility and visual preferences -->
     <div
       class="settings-overlay"
       id="settingsOverlay"
@@ -325,7 +334,11 @@
         </div>
       </div>
     </div>
+
+    <!-- Main Content Area: Hosts search, list, calculator, and guidance sections -->
     <main class="container" id="main-content">
+      
+      <!-- Search & Filters: Controls to find and sort compost items -->
       <section class="controls" aria-label="Search and filter items">
         <div class="search-wrapper">
           <label for="searchInput" class="sr-only">Search items</label>
@@ -391,11 +404,15 @@
         </div>
         <div id="search-status" class="sr-only" aria-live="polite"></div>
       </section>
+
+      <!-- Compost Items Cheat Sheet: Displays the dynamically populated items list -->
       <section
         id="itemContainer"
         class="cheat-sheet"
         aria-live="polite"
       ></section>
+
+      <!-- Compost Balance Checker: Interactive calculator for carbon/nitrogen ratio -->
       <section class="calculator" id="calculator">
         <div class="calculator-header">
           <div>
@@ -498,6 +515,8 @@
           </div>
         </div>
       </section>
+
+      <!-- Guidance & Instructions: Educational content on balancing compost -->
       <section class="guidance">
         <h2>Getting the Balance Right</h2>
         <div class="guidance-grid">
@@ -638,6 +657,8 @@
           </div>
         </details>
       </section>
+
+      <!-- Footer: Disclaimer and final notes -->
       <footer>
         <p>
           <strong>Disclaimer:</strong> Compost rules can vary by system (e.g.,
@@ -646,6 +667,8 @@
         </p>
       </footer>
     </main>
+
+    <!-- Application Script -->
     <script src="script.js"></script>
   </body>
 </html>
