@@ -1,38 +1,37 @@
 
 /* --- Loading Screen Logic --- */
-function initLoadingScreen() {
-  const loadingOverlay = document.getElementById('loadingOverlay');
+const loaderMessages = [
+  "Loading compost data...",
+  "Arranging greens and browns...",
+  "Waking up the microbes...",
+  "Preparing your bin..."
+];
+let messageIndex = 0;
+const loaderInterval = setInterval(() => {
+  messageIndex = (messageIndex + 1) % loaderMessages.length;
   const loadingText = document.getElementById('loadingText');
-  if (loadingOverlay && loadingText) {
-    const loaderMessages = [
-      "Loading compost data...",
-      "Arranging greens and browns...",
-      "Waking up the microbes...",
-      "Preparing your bin..."
-    ];
-    let messageIndex = 0;
-    
-    const loaderInterval = setInterval(() => {
-      messageIndex = (messageIndex + 1) % loaderMessages.length;
-      loadingText.textContent = loaderMessages[messageIndex];
-    }, 800);
+  if (loadingText) loadingText.textContent = loaderMessages[messageIndex];
+}, 800);
 
-    setTimeout(() => {
-      clearInterval(loaderInterval);
+const hideLoadingScreen = () => {
+  setTimeout(() => {
+    clearInterval(loaderInterval);
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    if (loadingOverlay) {
       loadingOverlay.classList.add('hidden');
       setTimeout(() => {
         if (loadingOverlay.parentNode) {
           loadingOverlay.parentNode.removeChild(loadingOverlay);
         }
-      }, 500); 
-    }, 2400); // 2.4s to allow users to see a few messages
-  }
-}
+      }, 500);
+    }
+  }, 2400);
+};
 
-if (document.readyState === 'loading') {
-  document.addEventListener("DOMContentLoaded", initLoadingScreen);
+if (document.readyState === 'complete') {
+  hideLoadingScreen();
 } else {
-  initLoadingScreen();
+  window.addEventListener('load', hideLoadingScreen);
 }
 
     const ITEMS = [
