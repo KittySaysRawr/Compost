@@ -1,6 +1,6 @@
 
 /* --- Loading Screen Logic --- */
-document.addEventListener("DOMContentLoaded", () => {
+function initLoadingScreen() {
   const loadingOverlay = document.getElementById('loadingOverlay');
   const loadingText = document.getElementById('loadingText');
   if (loadingOverlay && loadingText) {
@@ -27,7 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 500); 
     }, 2400); // 2.4s to allow users to see a few messages
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener("DOMContentLoaded", initLoadingScreen);
+} else {
+  initLoadingScreen();
+}
 
     const ITEMS = [
       // === GREENS (Nitrogen-Rich) ===
