@@ -1,4 +1,34 @@
 
+/* --- Loading Screen Logic --- */
+document.addEventListener("DOMContentLoaded", () => {
+  const loadingOverlay = document.getElementById('loadingOverlay');
+  const loadingText = document.getElementById('loadingText');
+  if (loadingOverlay && loadingText) {
+    const loaderMessages = [
+      "Loading compost data...",
+      "Arranging greens and browns...",
+      "Waking up the microbes...",
+      "Preparing your bin..."
+    ];
+    let messageIndex = 0;
+    
+    const loaderInterval = setInterval(() => {
+      messageIndex = (messageIndex + 1) % loaderMessages.length;
+      loadingText.textContent = loaderMessages[messageIndex];
+    }, 800);
+
+    setTimeout(() => {
+      clearInterval(loaderInterval);
+      loadingOverlay.classList.add('hidden');
+      setTimeout(() => {
+        if (loadingOverlay.parentNode) {
+          loadingOverlay.parentNode.removeChild(loadingOverlay);
+        }
+      }, 500); 
+    }, 2400); // 2.4s to allow users to see a few messages
+  }
+});
+
     const ITEMS = [
       // === GREENS (Nitrogen-Rich) ===
       { name: "Apple cores & peels", category: "Green", note: "Common kitchen scrap; decomposes quickly." },
@@ -1015,7 +1045,7 @@
                 <p class="item-note"><strong>Note:</strong> ${escapeHTML(item.note)}</p>
                 <p class="item-reason">${getCategoryReason(item)}</p>
                 ${getCompostTip(item) ? `<div class="item-tip">${getCompostTip(item)}</div>` : ''}
-                <a href="https://www.ecosia.org/search?q=composting+${encodeURIComponent((item.name || '').toLowerCase())}" target="_blank" rel="noopener noreferrer" class="learn-more-link" onclick="event.stopPropagation();">
+                <a href="https://www.ecosia.org/search?q=composting+${encodeURIComponent((item.name || '').toLowerCase())}" target="_blank" rel="noopener noreferrer" class="learn-more-link" onclick="event.stopPropagation();" aria-label="Learn more about composting ${escapeHTML(item.name)}">
                   Learn more
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
                 </a>
@@ -1077,16 +1107,18 @@
         groupDiv.id = `group-${cat}`;
         
         groupDiv.innerHTML = `
-          <button class="accordion-header" onclick="toggleAccordion('${cat}')" aria-expanded="${isOpen}">
-            <h2>
-              <span>${CATEGORY_ICONS[cat]}</span>
-              ${CATEGORY_NAMES[cat]}
-              <span class="category-count">${catItems.length}</span>
-            </h2>
-            <div class="accordion-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </div>
-          </button>
+          <h2 class="accordion-heading">
+            <button class="accordion-header" onclick="toggleAccordion('${cat}')" aria-expanded="${isOpen}">
+              <span class="accordion-header-title">
+                <span>${CATEGORY_ICONS[cat]}</span>
+                ${CATEGORY_NAMES[cat]}
+                <span class="category-count">${catItems.length}</span>
+              </span>
+              <span class="accordion-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+          </h2>
           <div class="accordion-content">
             <div class="accordion-inner">
               <div class="grid-container">
@@ -1378,17 +1410,60 @@
       }
     }
 
-    settingsBtn.addEventListener('click', () => {
-      settingsOverlay.classList.add('open');
-    });
+    let lastActiveElement = null;
 
-    closeSettings.addEventListener('click', () => {
+    function openSettingsPanel() {
+      lastActiveElement = document.activeElement;
+      settingsOverlay.classList.add('open');
+      // Delay focus slightly to let any CSS transition begin
+      setTimeout(() => {
+        closeSettings.focus();
+      }, 50);
+    }
+
+    function closeSettingsPanel() {
       settingsOverlay.classList.remove('open');
-    });
+      if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+        lastActiveElement.focus();
+      }
+    }
+
+    settingsBtn.addEventListener('click', openSettingsPanel);
+
+    closeSettings.addEventListener('click', closeSettingsPanel);
 
     settingsOverlay.addEventListener('click', (e) => {
       if (e.target === settingsOverlay) {
-        settingsOverlay.classList.remove('open');
+        closeSettingsPanel();
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && settingsOverlay.classList.contains('open')) {
+        closeSettingsPanel();
+      }
+    });
+
+    // Trap focus inside modal
+    settingsOverlay.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab') return;
+      
+      const focusables = settingsOverlay.querySelectorAll('button, input');
+      if (focusables.length === 0) return;
+      
+      const firstFocusable = focusables[0];
+      const lastFocusable = focusables[focusables.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusable) {
+          lastFocusable.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastFocusable || document.activeElement === settingsOverlay) {
+          firstFocusable.focus();
+          e.preventDefault();
+        }
       }
     });
 
