@@ -13,7 +13,7 @@
       { name: "Cherry pits", category: "Green", note: "Small and easy to ignore." },
       { name: "Strawberry tops", category: "Green", note: "Green leafy tops are great." },
       { name: "Raspberry mush", category: "Green", note: "Old berries rot very fast." },
-      { name: "Blueberry scraps", category: "Green", note: "Old or moldy berries are fine." },
+      { name: "Blueberry scraps", category: "Green", note: "Old or mouldy berries are fine." },
       { name: "Blackberry stems (Green)", category: "Green", note: "Fresh green stems only." },
       { name: "Cranberry sauce (plain)", category: "Green", note: "Avoid if it has lots of sugar/preservatives." },
       { name: "Grape stems", category: "Green", note: "Fine to add; slightly woody." },
@@ -31,7 +31,7 @@
       { name: "Guava scraps", category: "Green", note: "Tropical fruit waste." },
       { name: "Lychee skins", category: "Green", note: "Thin and easy." },
       { name: "Starfruit edges", category: "Green", note: "Fleshy fruit." },
-      { name: "Dragonfruit skin", category: "Green", note: "Soft and colorful." },
+      { name: "Dragonfruit skin", category: "Green", note: "Soft and colourful." },
       { name: "Passionfruit shells", category: "Green", note: "May take some time to soften." },
       { name: "Avocado skins", category: "Green", note: "Leathery; don't break down quickly but are harmless." },
       { name: "Avocado pits", category: "Green", note: "Slowest fruit pit; chop if possible." },
@@ -46,7 +46,7 @@
       { name: "Lettuce leaves", category: "Green", note: "Wilted salad is perfect." },
       { name: "Spinach stems", category: "Green", note: "Leafy greens are gold." },
       { name: "Kale ribs", category: "Green", note: "Tougher than leaves but still Green." },
-      { name: "Chard stalks", category: "Green", note: "Colorful and nitrogen-rich." },
+      { name: "Chard stalks", category: "Green", note: "colourful and nitrogen-rich." },
       { name: "Collard greens", category: "Green", note: "Wilted or old leaves." },
       { name: "Bok choy ends", category: "Green", note: "Crunchy green stems." },
       { name: "Cabbage cores", category: "Green", note: "Dense; chop to help microbes." },
@@ -91,9 +91,9 @@
       { name: "Moss (Green)", category: "Green", note: "Garden moss." },
       { name: "Clover (Fresh)", category: "Green", note: "Nitrogen fixer." },
       { name: "Alfalfa meal", category: "Green", note: "Used as a compost starter." },
-      { name: "Spent coffee grounds", category: "Green", note: "Nitrogen-rich despite the color." },
+      { name: "Spent coffee grounds", category: "Green", note: "Nitrogen-rich despite the colour." },
       { name: "Tea leaves", category: "Green", note: "Loose leaf is best." },
-      { name: "Tea bags (Natural fiber)", category: "Green", note: "Check for staples and plastic content." },
+      { name: "Tea bags (Natural fibre)", category: "Green", note: "Check for staples and plastic content." },
       { name: "Human hair", category: "Green", note: "Slow to break down but high nitrogen." },
       { name: "Pet fur", category: "Green", note: "From dogs/cats (untreated with flea meds)." },
       { name: "Chicken manure", category: "Green", note: "Very 'hot'; must be balanced with browns." },
@@ -210,7 +210,7 @@
       { name: "Taco shells (Plain)", category: "Green", note: "Corn based." },
       { name: "Tortillas (Corn/Expired)", category: "Green", note: "Soft nitrogen." },
       { name: "Tortillas (Flour/Expired)", category: "Green", note: "Wheat nitrogen." },
-      { name: "Bagel bits (Plain/Moldy)", category: "Green", note: "No toppings." },
+      { name: "Bagel bits (Plain/mouldy)", category: "Green", note: "No toppings." },
       { name: "Muffin crumbs (Plain)", category: "Green", note: "Basic flour waste." },
       { name: "Pancake scraps (Plain)", category: "Green", note: "Egg/Flour nitrogen." },
       { name: "Waffle bits (Plain)", category: "Green", note: "Breakfast waste." },
@@ -284,7 +284,7 @@
       { name: "Brown paper bags", category: "Brown", note: "Classic brown material." },
       { name: "Envelopes (No window)", category: "Brown", note: "Plain paper only." },
       { name: "Shredded office paper", category: "Brown", note: "Avoid white bleached or glossy paper if possible." },
-      { name: "Newspaper (Black/White)", category: "Brown", note: "Soy inks are safe; avoid color ads." },
+      { name: "Newspaper (Black/White)", category: "Brown", note: "Soy inks are safe; avoid colour ads." },
       { name: "Construction paper", category: "Brown", note: "Kid's craft waste." },
       { name: "Tissue paper (Plain)", category: "Brown", note: "Uncoated only." },
       { name: "Crepe paper", category: "Brown", note: "Birthday party waste." },
@@ -296,10 +296,10 @@
       { name: "Pizza boxes (Clean parts)", category: "Brown", note: "Tear off parts with no grease." },
       { name: "Wine corks (Natural)", category: "Brown", note: "Must be real cork, not plastic." },
       { name: "Matchsticks (Used)", category: "Brown", note: "Small wood bits." },
-      { name: "Burlap (Jute/Hemp)", category: "Brown", note: "Natural fibers only." },
+      { name: "Burlap (Jute/Hemp)", category: "Brown", note: "Natural fibres only." },
       { name: "Cotton scraps (100%)", category: "Brown", note: "Cut into small shreds." },
       { name: "Wool scraps (100%)", category: "Brown", note: "Natural wool only." },
-      { name: "Linen scraps (100%)", category: "Brown", note: "Ancient flax fiber." },
+      { name: "Linen scraps (100%)", category: "Brown", note: "Ancient flax fibre." },
       { name: "Silk scraps (100%)", category: "Brown", note: "Natural silk thread." },
       { name: "String/Twine (Jute)", category: "Brown", note: "Check for synthetic cores." },
       { name: "Walnut shells (Crushed)", category: "Brown", note: "Slow but carbon-rich." },
@@ -315,7 +315,7 @@
       { name: "Vacuum bag content", category: "Brown", note: "Only if you have natural rugs/dust." },
       { name: "Old potting soil", category: "Brown", note: "Spent soil adds bulk." },
       { name: "Peat moss (Dry)", category: "Brown", note: "Highly absorbent." },
-      { name: "Coir (Coconut fiber)", category: "Brown", note: "Great peat alternative." },
+      { name: "Coir (Coconut fibre)", category: "Brown", note: "Great peat alternative." },
       { name: "Abandoned bird nests", category: "Brown", note: "Twigs and mud." },
       { name: "Eggshells (Dried)", category: "Brown", note: "Calcium source; often grouped with browns for structure." },
       { name: "Nut husk (Cocoa)", category: "Brown", note: "Aromatic carbon." },
@@ -323,7 +323,7 @@
       { name: "Rice hulls", category: "Brown", note: "Often used in potting mixes." },
       { name: "Peanut butter jars (Lidless paper parts)", category: "Brown", note: "Clean only." },
       { name: "Bird feathers (Down)", category: "Brown", note: "Lightweight nitrogen/carbon mix." },
-      { name: "Cotton balls (100% cotton)", category: "Brown", note: "Pure natural fiber." },
+      { name: "Cotton balls (100% cotton)", category: "Brown", note: "pure natural fibre." },
       { name: "Cotton swabs (Paper stick)", category: "Brown", note: "Eco-friendly bathroom waste." },
       { name: "Cardboard tubes (Inner)", category: "Brown", note: "Foil wrap or paper towels." },
       { name: "Cardboard shippers", category: "Brown", note: "Remove all plastic tape first." },
@@ -340,7 +340,7 @@
       { name: "Paper mail (No plastic)", category: "No window envelopes." },
       { name: "Paper calendars (Matte)", category: "Brown", note: "Avoid glossy ones." },
       { name: "Paper worksheets (Old)", category: "Brown", note: "School waste." },
-      { name: "Paper coloring pages", category: "Brown", note: "Crayon is okay in tiny amounts." },
+      { name: "Paper colouring pages", category: "Brown", note: "Crayon is okay in tiny amounts." },
       { name: "Paper sketchbook pages", category: "Brown", note: "Graphite/charcoal is fine." },
       { name: "Paper notepad pages", category: "Brown", note: "Basic office brown." },
       { name: "Paper sticky notes", category: "Brown", note: "Small glue strip is negligible." },
@@ -387,7 +387,7 @@
       { name: "Paper bills (Old)", category: "Brown", note: "Personal brown." },
       { name: "Paper tax forms (Old)", category: "Brown", note: "Federal brown." },
       { name: "Paper junk mail (Shredded)", category: "Brown", note: "Bulk carbon." },
-      { name: "Paper coloring books", category: "Brown", note: "Childhood brown." },
+      { name: "Paper colouring books", category: "Brown", note: "Childhood brown." },
       { name: "Paper crossword books", category: "Brown", note: "Puzzle brown." },
       { name: "Paper sudoku pages", category: "Brown", note: "Math brown." },
       { name: "Paper origami scraps", category: "Brown", note: "Folded brown." },
@@ -447,14 +447,14 @@
       { name: "Paper streamers (Degradable)", category: "Brown", note: "Check matte finish." },
       { name: "Raffia", category: "Brown", note: "Palm leaf brown." },
       { name: "Shredded maps (Matte)", category: "Brown", note: "Paper maps." },
-      { name: "Straw hats (Natural fiber)", category: "Brown", note: "Tear into pieces." },
+      { name: "Straw hats (Natural fibre)", category: "Brown", note: "Tear into pieces." },
       { name: "Wine corks (Wood)", category: "Brown", note: "Real cork only." },
       { name: "Wood ash (Hardwood)", category: "Brown", note: "Use sparingly; raises pH." },
       { name: "Cedar wood chips", category: "Brown", note: "Resistant to rot; use small amounts." },
       
       // === NO (AVOID / NON-COMPOSTABLE) ===
       { name: "Beef scraps", category: "Avoid", note: "Meat scrap that attracts pests." },
-      { name: "Pork fat", category: "Avoid", note: "Meat fat with rancid odors and slow breakdown." },
+      { name: "Pork fat", category: "Avoid", note: "Meat fat with rancid odours and slow breakdown." },
       { name: "Chicken bones", category: "Avoid", note: "Meat bones that attract animals and won't break down at home." },
       { name: "Fish heads", category: "Avoid", note: "Meat/Fish with strong smell; attracts cats/rodents." },
       { name: "Lamb trimmings", category: "Avoid", note: "Meat that is greasy and problematic." },
@@ -473,7 +473,7 @@
       { name: "T-bone fragments", category: "Avoid", note: "Heavy meat bones." },
       { name: "Ribeye bones", category: "Avoid", note: "Greasy meat bones." },
       { name: "Milk", category: "Avoid", note: "Attracts flies and can sour the pile." },
-      { name: "Cheese", category: "Avoid", note: "Mold issues and pests." },
+      { name: "Cheese", category: "Avoid", note: "mould issues and pests." },
       { name: "Yogurt", category: "Avoid", note: "Dairy pathogens in home bins." },
       { name: "Butter / Margarine", category: "Avoid", note: "Pure fat; smothers microbes." },
       { name: "Whole eggs", category: "Avoid", note: "Rotten egg smell is inevitable." },
@@ -499,7 +499,7 @@
       { name: "Spandex items", category: "Avoid", note: "Stretch plastic." },
       { name: "Rubber bands", category: "Avoid", note: "Do not break down naturally." },
       { name: "Latex gloves", category: "Avoid", note: "Unless 100% natural and certified." },
-      { name: "Aluminum foil", category: "Avoid", note: "Metal waste." },
+      { name: "Aluminium foil", category: "Avoid", note: "Metal waste." },
       { name: "Tin cans", category: "Avoid", note: "Recycle these instead." },
       { name: "Steel wire", category: "Avoid", note: "Rust is okay, but wire persists." },
       { name: "Copper pipe scraps", category: "Avoid", note: "High concentrations are toxic to microbes." },
@@ -517,7 +517,7 @@
       { name: "Black Walnut husks", category: "Avoid", note: "Inhibits plant growth (Juglone)." },
       { name: "Cigarette butts", category: "Avoid", note: "Plastic filters and nicotine (a pesticide)." },
       { name: "Dryer sheets (Synthetic)", category: "Avoid", note: "Coated with chemical softeners and plastic." },
-      { name: "Vacuum lint (Synthetic carpet)", category: "Avoid", note: "Full of plastic fibers." },
+      { name: "Vacuum lint (Synthetic carpet)", category: "Avoid", note: "full of plastic fibres." },
       { name: "Stickers on fruit", category: "Avoid", note: "Remove these! They are plastic." },
       { name: "Teabags (Plastic mesh)", category: "Avoid", note: "Many modern teabags are plastic." },
       { name: "Staples in paper", category: "Avoid", note: "Small but annoying." },
@@ -550,8 +550,8 @@
       { name: "Light bulbs", category: "Avoid", note: "Glass and toxins." },
       { name: "Mirror shards", category: "Avoid", note: "Glass hazard." },
       { name: "Dead animals (Large)", category: "Avoid", note: "Health hazard and major pest magnet." },
-      { name: "Moldy bread with seeds", category: "Avoid", note: "Seeds might sprout; mold is okay but seeds are risky." },
-      { name: "Magazines", category: "Avoid", note: "Heavy metals in some colored inks." },
+      { name: "mouldy bread with seeds", category: "Avoid", note: "Seeds might sprout; mould is okay but seeds are risky." },
+      { name: "Magazines", category: "Avoid", note: "Heavy metals in some coloured inks." },
       { name: "Envelopes with plastic windows", category: "Avoid", note: "Cut the window out first." },
       { name: "Gum", category: "Avoid", note: "Usually synthetic rubber/plastic base." },
       { name: "Cough drops", category: "Avoid", note: "Sugar and chemicals." },
@@ -663,7 +663,7 @@
       { name: "Netting (Plastic)", category: "Avoid", note: "Bird netting hazard." },
       { name: "Fencing (Plastic)", category: "Avoid", note: "Synthetic barrier." },
       { name: "Tarps (Plastic)", category: "Avoid", note: "Polyester/Coating." },
-      { name: "Rope (Nylon)", category: "Avoid", note: "Synthetic fiber." },
+      { name: "Rope (Nylon)", category: "Avoid", note: "synthetic fibre." },
       { name: "Rope (Polyester)", category: "Avoid", note: "Plastic cord." },
       { name: "Fishing line", category: "Avoid", note: "Monofilament plastic." },
       { name: "Fishing nets", category: "Avoid", note: "Ocean plastic." },
@@ -672,7 +672,7 @@
       { name: "Beach balls", category: "Avoid", note: "Summer plastic." },
       { name: "Sunblock bottles", category: "Avoid", note: "Plastic container." },
       { name: "Insect repellent bottles", category: "Avoid", note: "Chemical residue." },
-      { name: "Fertilizer bags (Plastic)", category: "Avoid", note: "Chemical plastic." },
+      { name: "Fertiliser bags (Plastic)", category: "Avoid", note: "Chemical plastic." },
       { name: "Pesticide bottles", category: "Avoid", note: "Toxic hazard." },
       { name: "Herbicide bottles", category: "Avoid", note: "Poison hazard." },
       { name: "Gas cans", category: "Avoid", note: "Fuel hazard." },
@@ -699,13 +699,13 @@
       { name: "Push pins (Plastic)", category: "Avoid", note: "Office hazard." },
       { name: "Animal fat trimmings", category: "Avoid", note: "Rancid stenches and pests." },
       { name: "Antiseptic wipes", category: "Avoid", note: "Kill beneficial bacteria." },
-      { name: "Baby wipes", category: "Avoid", note: "Contain plastic fibers." },
+      { name: "Baby wipes", category: "Avoid", note: "contain plastic fibres." },
       { name: "BBQ briquettes (Chemical)", category: "Avoid", note: "Toxic additives." },
       { name: "Cat litter (Crystal)", category: "Avoid", note: "Silica doesn't rot." },
       { name: "Dryer sheets (Used)", category: "Avoid", note: "Chemical and plastic residue." },
       { name: "Pesticide containers (Empty)", category: "Avoid", note: "Toxic residue risk." },
       { name: "Fabric softener sheets", category: "Avoid", note: "Non-biodegradable chemicals." },
-      { name: "Fertilizer with weed killer", category: "Avoid", note: "Kills your garden plants later." },
+      { name: "Fertiliser with weed killer", category: "Avoid", note: "Kills your garden plants later." },
       { name: "Glossy flyers", category: "Avoid", note: "Plastic coating." },
       { name: "Cat litter (Scented)", category: "Avoid", note: "Perfumes and chemicals." },
       { name: "Milk cartons (Waxy/Plastic)", category: "Avoid", note: "Hard to break down at home." },
@@ -738,10 +738,10 @@
       { id: 'paper', label: 'Paper/Cardboard', color: '#374151', bg: '#f3f4f6', keywords: ['paper', 'cardboard', 'box', 'envelope', 'magazine', 'receipt', 'napkin', 'tissue', 'tp', 'carton'] },
       { id: 'wood', label: 'Wood & Bark', color: '#451a03', bg: '#fef08a', keywords: ['wood', 'sawdust', 'chip', 'twig', 'branch', 'briquette', 'cork', 'bamboo', 'particle board'] },
       { id: 'soil', label: 'Soil & Compost', color: '#3f2c06', bg: '#d6c6b3', keywords: ['soil', 'peat moss', 'coir', 'bark', 'mulch', 'ash', 'coal', 'charcoal', 'dirt'] },
-      { id: 'natural_fiber', label: 'Natural Fibers', color: '#0f766e', bg: '#ccfbf1', keywords: ['cotton', 'wool', 'linen', 'silk', 'burlap', 'jute', 'hemp', 'thread', 'textile', 'loofah', 'fabric'], excludes: ['synthetic', 'plastic', 'nylon', 'poly'] },
+      { id: 'natural_fibre', label: 'Natural Fibres', color: '#0f766e', bg: '#ccfbf1', keywords: ['cotton', 'wool', 'linen', 'silk', 'burlap', 'jute', 'hemp', 'thread', 'textile', 'loofah', 'fabric'], excludes: ['synthetic', 'plastic', 'nylon', 'poly'] },
       { id: 'animal_product', label: 'Animal Products', color: '#78350f', bg: '#fef3c7', keywords: ['hair', 'fur', 'feather', 'nail', 'gelatin', 'leather'] },
       { id: 'plastic', label: 'Plastic', color: '#831843', bg: '#fdf2f8', keywords: ['plastic', 'synthetic', 'poly', 'nylon', 'spandex', 'rubber', 'latex', 'styrofoam', 'pvc', 'vinyl'], excludes: ['check for', 'no plastic', 'natural fiber', 'natural only'] },
-      { id: 'metal', label: 'Metal', color: '#334155', bg: '#e2e8f0', keywords: ['metal', 'aluminum', 'foil', 'tin', 'wire', 'copper', 'steel', 'iron', 'brass'], excludes: ['remove'] },
+      { id: 'metal', label: 'Metal', color: '#334155', bg: '#e2e8f0', keywords: ['metal', 'aluminium', 'foil', 'tin', 'wire', 'copper', 'steel', 'iron', 'brass'], excludes: ['remove'] },
       { id: 'glass', label: 'Glass', color: '#0c4a6e', bg: '#e0f2fe', keywords: ['glass', 'ceramic', 'mirror', 'bulb'] },
       { id: 'chemical', label: 'Chemical/Toxic', color: '#7f1d1d', bg: '#fee2e2', keywords: ['chemical', 'pesticide', 'herbicide', 'fungicide', 'toxic', 'paint', 'solvent', 'bleach', 'ammonia', 'cleaner', 'wax', 'waxy', 'polish', 'poison', 'motor oil', 'antifreeze', 'brake fluid', 'aerosol', 'kerosene', 'fuel', 'diesel', 'lighter fluid', 'dryer lint', 'wipe', 'medicine', 'drug', 'cigar', 'snuff', 'tobacco', 'vape', 'nicotine', 'antiseptic', 'disinfectant', 'paraffin'] },
       { id: 'garden_waste', label: 'Garden Waste', color: '#14532d', bg: '#ecfccb', keywords: ['grass', 'weed', 'leaf', 'leaves', 'pine', 'straw', 'hay', 'plant', 'flower', 'bouquet', 'clipping', 'garden', 'clover', 'lemon balm', 'nettle'], excludes: ['plant protein', 'plastic', 'synthetic'] },
@@ -799,7 +799,7 @@
       
       // Cross-category exclusion for plastic vs natural fibers/garden waste
       if (chipIds.has('plastic')) {
-        item.categoryChips = uniqueChips.filter(c => c.id !== 'garden_waste' && c.id !== 'natural_fiber');
+        item.categoryChips = uniqueChips.filter(c => c.id !== 'garden_waste' && c.id !== 'natural_fibre');
       } else {
         item.categoryChips = uniqueChips;
       }
@@ -840,7 +840,7 @@
         const name = (item.name || '').toLowerCase();
         if (item.category === 'Green') {
             if (name.includes('manure')) return '<strong>Why Green?</strong> Manure is extremely rich in nitrogen and acts as an activator to heat up the compost pile.';
-            if (name.includes('coffee') || name.includes('tea')) return '<strong>Why Green?</strong> Despite their brown color, coffee grounds and tea leaves are rich in nitrogen and protein.';
+            if (name.includes('coffee') || name.includes('tea')) return '<strong>Why Green?</strong> Despite their brown colour, coffee grounds and tea leaves are rich in nitrogen and protein.';
             if (name.includes('fruit') || name.includes('peel') || name.includes('core')) return '<strong>Why Green?</strong> Fruit scraps are wet and high in nitrogen, providing quick energy for microbes.';
             if (name.includes('vegetable') || name.includes('scrap')) return '<strong>Why Green?</strong> Vegetable scraps add essential moisture and nitrogen to the compost ecosystem.';
             if (name.includes('grass') || name.includes('weed') || name.includes('clover')) return '<strong>Why Green?</strong> Freshly cut grass and green plants are packed with moisture and nitrogen.';
@@ -851,13 +851,13 @@
             if (name.includes('wood') || name.includes('sawdust') || name.includes('chip') || name.includes('twig')) return '<strong>Why Brown?</strong> Wood materials are dense sources of carbon that break down slowly and provide aeration.';
             if (name.includes('leaf') || name.includes('leaves') || name.includes('pine')) return '<strong>Why Brown?</strong> Dry leaves are a classic carbon source that adds bulk and helps balance wet "Greens".';
             if (name.includes('shell') || name.includes('pit') || name.includes('nut')) return '<strong>Why Brown?</strong> Hard shells are high in carbon and take a very long time to decompose, adding structure.';
-            if (name.includes('cotton') || name.includes('wool') || name.includes('fabric')) return '<strong>Why Brown?</strong> Natural plant and animal fibers act as slow-decomposing carbon sources.';
+            if (name.includes('cotton') || name.includes('wool') || name.includes('fabric')) return '<strong>Why Brown?</strong> Natural plant and animal fibres act as slow-decomposing carbon sources.';
             if (name.includes('straw') || name.includes('hay')) return '<strong>Why Brown?</strong> Dried plant stalks like straw are high in carbon and create excellent air pockets in the pile.';
             return '<strong>Why Brown?</strong> It is high in carbon and provides structural bulk and energy for compost microbes.';
         }
         if (item.category === 'Avoid') {
             if (name.includes('plastic') || name.includes('synthetic') || name.includes('poly')) return '<strong>Why Avoid?</strong> Synthetic materials will never decompose and will contaminate the finished compost.';
-            if (name.includes('meat') || name.includes('fat') || name.includes('dairy') || name.includes('bone') || name.includes('cheese')) return '<strong>Why Avoid?</strong> Animal products rot and putrefy, spreading strong odors that attract rodents and pests.';
+            if (name.includes('meat') || name.includes('fat') || name.includes('dairy') || name.includes('bone') || name.includes('cheese')) return '<strong>Why Avoid?</strong> Animal products rot and putrefy, spreading strong odours that attract rodents and pests.';
             if (name.includes('poop') || name.includes('waste') || name.includes('litter') || name.includes('feces')) return '<strong>Why Avoid?</strong> Carnivore pet and human waste carry dangerous pathogens that can survive home composting.';
             if (name.includes('disease') || name.includes('blight') || name.includes('weed seed')) return '<strong>Why Avoid?</strong> Home composts rarely get hot enough to destroy diseases or persistent seeds, which can spread to your garden.';
             if (name.includes('chemical') || name.includes('treated') || name.includes('glossy') || name.includes('paint')) return '<strong>Why Avoid?</strong> Toxic chemicals can kill the beneficial microbes driving the composting process.';
@@ -877,7 +877,7 @@
                  return '<strong>Warning:</strong> Plastics and synthetic materials will never break down in a home compost and contaminate soil.';
              }
              if (name.includes('meat') || name.includes('bone') || name.includes('fat') || name.includes('dairy') || name.includes('cheese') || name.includes('milk') || name.includes('butter') || name.includes('oil') || note.includes('pest')) {
-                 return '<strong>Warning:</strong> Animal products and fats putrefy quickly, produce foul odors, and are strong attractants for rats and other pests.';
+                 return '<strong>Warning:</strong> Animal products and fats putrefy quickly, produce foul odours, and are strong attractants for rats and other pests.';
              }
              if (name.includes('poop') || name.includes('waste') || name.includes('litter') || name.includes('diaper') || name.includes('feces')) {
                  return '<strong>Warning:</strong> Pet and human waste can carry harmful pathogens and parasites that survive standard compost temperatures.';
@@ -927,7 +927,7 @@
                  return '<strong>Composting Tip:</strong> Hard shells and pits decompose extremely slowly. Crush them with a hammer first, or expect to sift them out of finished compost.';
              }
              if (name.includes('fabric') || name.includes('cotton') || name.includes('wool') || name.includes('hair') || name.includes('fur')) {
-                 return '<strong>Composting Tip:</strong> Natural fibers will break down, but slowly. Cut fabrics into small strips and bury hair/fur deep so it doesn\'t blow away.';
+                 return '<strong>Composting Tip:</strong> Natural fibres will break down, but slowly. Cut fabrics into small strips and bury hair/fur deep so it doesn\'t blow away.';
              }
              if (name.includes('straw') || name.includes('hay')) {
                  return '<strong>Composting Tip:</strong> Straw provides excellent structure and aeration to a pile. Ensure it hasn\'t been treated with persistent herbicides.';
@@ -1258,7 +1258,7 @@
       if (total === 0) {
         statusBadge.textContent = "Empty Bin";
         statusBadge.className = "status-badge";
-        statusDesc.textContent = "Adjust the sliders to analyze your compost mix.";
+        statusDesc.textContent = "Adjust the sliders to analyse your compost mix.";
         indicatorFill.style.width = "0%";
         indicatorFill.className = "indicator-fill";
         moodIndicator.textContent = "🕳️";
